@@ -6,7 +6,7 @@
 <!-- badges: end -->
 
 
-![](images/logo-networks_150dpi.png)
+![](images/banner-networks_150dpi.png)
 
 Source of the [workshop](https://econetoolbox.github.io/) **_Analyzing Ecological networks_**
 co-organized by the
