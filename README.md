@@ -1,7 +1,7 @@
 ## Course website
 
 <!-- badges: start -->
-[![Quarto Render and Publish](https://github.com/econetoolbox/econetoolbox.github.io/actions/workflows/render-website.yaml/badge.svg)](https://github.com/econetoolbox/econetoolbox.github.io/actions/workflows/render-website.yaml)
+[![Quarto Render and Publish](https://github.com/rdatatoolbox/rdatatoolbox.github.io/actions/workflows/render-website.yaml/badge.svg)](https://github.com/econetoolbox/econetoolbox.github.io/actions/workflows/render-website.yaml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-green.svg)](https://choosealicense.com/licenses/cc-by-4.0/)
 <!-- badges: end -->
 
