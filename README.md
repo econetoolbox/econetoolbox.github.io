@@ -6,7 +6,7 @@
 <!-- badges: end -->
 
 
-![](https://raw.githubusercontent.com/rdatatoolbox/.github/main/profile/banner-rdatatoolbox_150dpi.png)
+![](images/logo-networks_150dpi.png)
 
 Source of the [workshop](https://econetoolbox.github.io/) **_Analyzing Ecological networks_**
 co-organized by the
