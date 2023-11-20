@@ -1,0 +1,74 @@
+---
+toc: true
+---
+
+# Welcome {.unnumbered}
+
+::: {.callout-note}
+## Registrations for the 2024 session are upcoming
+
+Registrations will open in December and the course takes will take place 22-26 April 2024. 
+
+{{< fa hand-point-right >}}&nbsp; Subscribe to the 
+[FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) 
+to stay informed. More information is available on the  
+[FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/).
+:::
+
+
+
+The objective of this five-day course, co-organized by the 
+[FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
+and the
+[ANR ECONET](https://cmatias.perso.math.cnrs.fr/ANR_EcoNet.html), 
+is to train young researchers in analyzing ecological network data. The course covers a general introduction to networks, classical metrics (including modularity, nesteness, clustering), null models, generative models (including SBM), multilayer networks, as well as an overview of newer techniques (such as embedding). Each topic is explored through lectures followed by practicals.
+
+
+## Program {.unnumbered}
+
++---------------+-------------------------------------------------+
+| **Monday**    | - Introduction (Graphs, what’s a network?)      |     
++---------------+-------------------------------------------------+
+| **Tuesday**   | - Advanced metrics and null models              |
++---------------+-------------------------------------------------+
+| **Wednesday** | - Stochastic Block Models                       |
++---------------+-------------------------------------------------+
+| **Thursday**  | - Multilayer networks                           |
++---------------+-------------------------------------------------+
+| **Friday**    | - Subgroups projects                            |
++---------------+-------------------------------------------------+
+
+
+## Prerequisites {.unnumbered}
+
+{{< fa hand-point-right >}}&nbsp; Please follow this [tutorial](https://frbcesab.github.io/rsetup/) to install 
+your working environment **before attending the training course**.
+
+{{< fa hand-point-right >}}&nbsp; You also need to create an account on [GitHub](https://github.com/signup/).
+
+
+## Material {.unnumbered}
+
+All the material used in this training course (slides, data, exercises) is available at: <https://github.com/econetoolbox/>
+
+
+## Citation {.unnumbered}
+
+> To do
+
+
+## Contributions {.unnumbered}
+
+If you see mistakes or want to suggest changes, please [create an issue](https://github.com/econetoolbox/econetoolbox.github.io/issues/new) on the source repository.
+
+
+## Reuse {.unnumbered}
+
+Text and figures are licensed under Creative Commons Attribution [CC By 4.0](https://creativecommons.org/licenses/by/4.0/), unless otherwise noted.
+
+
+## See also {.unnumbered}
+
+Discover the other training courses provided by the FRB-CESAB and its partners: <https://frbcesab.github.io/training-courses/>
+
+

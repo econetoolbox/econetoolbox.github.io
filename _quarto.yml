@@ -1,0 +1,50 @@
+project:
+  type: book
+
+book:
+  title: "Analyzing Ecological Networks"
+  
+  author: 
+    - name: "Nicolas Casajus"
+      orcid: "0000-0002-5537-5294"
+      url: "https://nicolascasajus.fr"
+      affiliations: 
+        - name: FRB-CESAB
+          url: "https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/"
+      
+  date: today
+  description:  |
+    FRB-CESAB & ANR ECONET course
+    <br /><br />
+    <a href="https://www.fondationbiodiversite.fr/en/evenement/frb-cesab-analyzing-ecological-network-data-2024/">
+      <img class="logo" src="images/banner-networks_150dpi.png" style="width: 100%;" />
+    </a>
+
+  favicon: images/logo-networks_150dpi.png
+  
+  page-footer: 
+    left: "&copy; CC-By [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)"
+    center: "Code source available on [{{< fa brands github >}}](https://github.com/rdatatoolbox/rdatatoolbox.github.io/)"
+    right: "Built with [Quarto](https://quarto.org/)"
+    border: true
+  
+  reader-mode: false
+  search: false
+  
+  chapters:
+    - index.qmd
+    - part: "PREREQUISITES"
+      chapters: 
+        - chapters/setting-up-r.qmd
+    - part: "COURSES"
+      chapters: 
+        - chapters/course-compendium.qmd
+    - part: "EXERCISES"
+      chapters: 
+        - chapters/ex-compendium.qmd
+    
+format:
+  html:
+    theme: [cosmo, css/styles.css]
+    code-copy: true
+    code-line-numbers: false
