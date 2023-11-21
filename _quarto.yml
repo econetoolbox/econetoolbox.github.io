@@ -5,6 +5,12 @@ book:
   title: "Analyzing Ecological Networks"
   
   author: 
+    - name: "Sonia Kefi"
+      orcid: "0000-0002-9678-7770"
+      url: "http://sonia.kefi.fr"
+      affiliations: 
+        - name: CNRS
+          url: "https://isem-evolution.fr/"
     - name: "Nicolas Casajus"
       orcid: "0000-0002-5537-5294"
       url: "https://nicolascasajus.fr"
