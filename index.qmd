@@ -5,14 +5,16 @@ toc: true
 # Welcome {.unnumbered}
 
 ::: {.callout-note}
-## Registrations for the 2024 session are upcoming
+## Registrations for the 2024 session are close
 
-Registrations will open in December and the course takes will take place 22-26 April 2024. 
+<!-- 
+Registrations will open in December and the course takes will take place 22-26 April 2024.  
+-->
 
 {{< fa hand-point-right >}}&nbsp; Subscribe to the 
 [FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) 
 to stay informed. More information is available on the  
-[FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/).
+[FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/analyse-de-reseaux-dinteractions-en-ecologie/).
 :::
 
 
@@ -43,8 +45,11 @@ is to train young researchers in analyzing ecological network data. The course c
 
 {{< fa hand-point-right >}}&nbsp; Please follow this [tutorial](https://frbcesab.github.io/rsetup/) to install 
 your working environment **before attending the training course**.
+Only R, RStudio Desktop, and Rtools (for Windows users) are required.
 
+<!-- 
 {{< fa hand-point-right >}}&nbsp; You also need to create an account on [GitHub](https://github.com/signup/).
+-->
 
 
 ## Material {.unnumbered}
