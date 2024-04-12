@@ -17,9 +17,9 @@ book:
       affiliations: 
         - name: INRAE
           url: "https://www.inrae.fr/"
-    - name: "Nicolas Casajus"
+    - name: "Camille Coux"
       orcid: "0000-0002-5537-5294"
-      url: "https://nicolascasajus.fr"
+      url: "https://www.fondationbiodiversite.fr/en/membre/camille-coux/"
       affiliations: 
         - name: FRB-CESAB
           url: "https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/"
@@ -48,12 +48,9 @@ book:
     - part: "PREREQUISITES"
       chapters: 
         - chapters/setting-up-r.qmd
+        - chapters/install-packages.qmd
     - part: "COURSES"
-      chapters: 
-        - chapters/course-compendium.qmd
     - part: "EXERCISES"
-      chapters: 
-        - chapters/ex-compendium.qmd
     
 format:
   html:
