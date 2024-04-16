@@ -18,7 +18,7 @@ book:
         - name: INRAE
           url: "https://www.inrae.fr/"
     - name: "Camille Coux"
-      orcid: "0000-0002-5537-5294"
+      orcid: "0000-0002-6346-9194"
       url: "https://www.fondationbiodiversite.fr/en/membre/camille-coux/"
       affiliations: 
         - name: FRB-CESAB
@@ -36,7 +36,7 @@ book:
   
   page-footer: 
     left: "&copy; CC-By [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)"
-    center: "Code source available on [{{< fa brands github >}}](https://github.com/rdatatoolbox/rdatatoolbox.github.io/)"
+    center: "Code source available on [{{< fa brands github >}}](https://github.com/econetoolbox/econetoolbox.github.io/)"
     right: "Built with [Quarto](https://quarto.org/)"
     border: true
   
