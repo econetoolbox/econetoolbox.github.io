@@ -48,12 +48,9 @@ book:
     - part: "PREREQUISITES"
       chapters: 
         - chapters/setting-up-r.qmd
-    # - part: "COURSES"
-      # chapters: 
-        # - chapters/course-compendium.qmd
-    # - part: "EXERCISES"
-      # chapters: 
-        # - chapters/ex-compendium.qmd
+        - chapters/install-packages.qmd
+    - part: "COURSES"
+    - part: "EXERCISES"
     
 format:
   html:

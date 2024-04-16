@@ -1,0 +1,56 @@
+## R packages to install {.unnumbered}
+
+Here is a list of packages that you need to install so that you can follow the practicals. You can use install.packages(name-package). 
+
+### For day 2 
+
+library(bipartite)
+
+library(igraph)
+
+library(FWebs)
+
+library(vegan)
+
+library(cheddar)
+
+library(matlib)
+
+library(sbm)
+
+library(alluvial)
+
+library(econetwork)
+
+library(poweRlaw)
+
+Mac users won't be able to install the package FWebs. They can use this file with the needed functions. 
+
+In the course script, there is also an alternative to get the database of all food webs that are in this package, but it requires to have rmangal installed:
+
+library(rmangal)
+
+mg1 <- create.fw.list(db="mg", ref=TRUE, spatial = TRUE)
+
+### For day 3 and 4
+
+remotes::install_github("Jo-Theo/shinySbm")
+
+remotes::install_github("Chabert-Liddell/colSBM")
+
+library(colSBM)
+
+library(network)
+
+library(GGally)
+
+library(RColorBrewer)
+
+library(knitr)
+
+
+
+
+
+
+

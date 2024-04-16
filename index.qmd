@@ -5,11 +5,9 @@ toc: true
 # Welcome {.unnumbered}
 
 ::: {.callout-note}
-## Registrations for the 2024 session are close
+## Registrations for the 2024 session are closed
 
-<!-- 
-Registrations will open in December and the course takes will take place 22-26 April 2024.  
--->
+The course takes will take place 22-26 April 2024. 
 
 {{< fa hand-point-right >}}&nbsp; Subscribe to the 
 [FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) 
@@ -27,6 +25,8 @@ is to train young researchers in analyzing ecological network data. The course c
 
 
 ## Program {.unnumbered}
+
+Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4pm. 
 
 +---------------+-------------------------------------------------+
 | **Monday**    | - Introduction (Graphs, what’s a network?)      |     
