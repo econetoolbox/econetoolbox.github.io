@@ -51,6 +51,12 @@ book:
         - chapters/install-packages.qmd
     - part: "COURSES"
     - part: "EXERCISES"
+      chapters:
+        - text: igraph exercise
+          href: chapters/day1_0_igraph.html
+        - text: Graph exploration
+          href: chapters/day1_1_Graph_Exploration.html
+
     
 format:
   html:

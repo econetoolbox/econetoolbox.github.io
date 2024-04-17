@@ -28,33 +28,72 @@ is to train young researchers in analyzing ecological network data. The course c
 
 Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4pm. 
 
-+---------------+-------------------------------------------------+
-| **Monday**    | - Introduction (Graphs, what’s a network?)      |     
-+---------------+-------------------------------------------------+
-| **Tuesday**   | - Advanced metrics and null models              |
-+---------------+-------------------------------------------------+
-| **Wednesday** | - Stochastic Block Models                       |
-+---------------+-------------------------------------------------+
-| **Thursday**  | - Multilayer networks                           |
-+---------------+-------------------------------------------------+
-| **Friday**    | - Subgroups projects                            |
-+---------------+-------------------------------------------------+
+
+### Monday April 22nd 2024: Introduction
+| **9:00**: *Welcome*
+| **9:30**: Introduction to networks  
+| **9:30**: *Coffee break*
+| **11:00**: What kind of networks in ecology ? 
+| **11:30**: How are ecological network data collected ? 
+| **12:00**: *Lunch break*
+| **14:00**: "Speed dating" 
+| **14:30**: `igraph`
+| **15:30**: *Coffee break*
+| **16:00**: What determines interactions in ecological networks?
+| **17:30**: End of the working day
+
+### Tuesday April 24th 2024 - Network metrics and null models
+| **9:00**: Metrics
+| **10:30**: *Coffee break*
+| **11:00**: Network models, null models
+| **12:00**: *Lunch break* 
+| **14:00**: Complexity stability
+| **15:00**: The structure of ecological networks: what do we know?
+| **16:00**: *Coffee break*
+| **16:30**: Group projects
+| **17:30**: End of the working day 
+
+
+### Wednesday April 25th 2024 - Generative Stochastic Models
+| **9:00**: Introduction to block models
+| **10:30**: *Coffee break*
+| **11:00**: Selecting the number of blocks
+| **12:00**: *Lunch break* 
+| **14:00**: The structure of ecological networks: what do we know? (2)
+| **15:00**: *Coffee break*
+| **15:30**: Group projects
+| **17:30**: End of the working day 
+
+
+### Thursday April 26th 2024 - Multilayer networks
+| **9:00**: Multilayer networks in ecology
+| **10:30**: *Coffee break*
+| **11:00**: Multilayer in practice
+| **12:00**: *Lunch break* 
+| **14:00**: Group projects
+| **17:30**: End of the working day 
+
+### Friday April 27th 2024 - Opening and group presentations
+| **9:00**: Motifs, embedding, collection of networks
+| **10:30**: *Coffee break*
+| **11:00**: finalizing presentations
+| **12:00**: *Lunch break at the CESAB* 
+| **14:00**: Group project presentations
+| **16:30**: End of the workshop
 
 
 ## Prerequisites {.unnumbered}
 
 {{< fa hand-point-right >}}&nbsp; Please follow this [tutorial](https://frbcesab.github.io/rsetup/) to install 
 your working environment **before attending the training course**.
-Only R, RStudio Desktop, and Rtools (for Windows users) are required.
+Only `R`, `RStudio Desktop`, and `Rtools` (for Windows users) are required for this course.
 
-<!-- 
-{{< fa hand-point-right >}}&nbsp; You also need to create an account on [GitHub](https://github.com/signup/).
--->
+You also need to create an account on [GitHub](https://github.com/signup/).
 
 
 ## Material {.unnumbered}
 
-All the material used in this training course (slides, data, exercises) is available at: <https://github.com/econetoolbox/>
+All the material used in this training course (slides, data, exercises) will be available at: <https://github.com/econetoolbox/>
 
 
 ## Citation {.unnumbered}
