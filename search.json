@@ -14,7 +14,7 @@
     "href": "index.html#program",
     "title": "Analyzing Ecological Networks",
     "section": "Program",
-    "text": "Program\nClasses will run from 9am to 5:30pm every day except Friday, when we finish at 4pm.\n\n\n\n\n\n\n\nMonday\n\nIntroduction (Graphs, what’s a network?)\n\n\n\nTuesday\n\nAdvanced metrics and null models\n\n\n\nWednesday\n\nStochastic Block Models\n\n\n\nThursday\n\nMultilayer networks\n\n\n\nFriday\n\nSubgroups projects",
+    "text": "Program\nClasses will run from 9am to 5:30pm every day except Friday, when we finish at 4pm.\n\nMonday April 22nd 2024: Introduction\n9:00: Welcome\n9:30: Introduction to networks\n9:30: Coffee break\n11:00: What kind of networks in ecology ?\n11:30: How are ecological network data collected ?\n12:00: Lunch break\n14:00: “Speed dating”\n14:30: igraph\n15:30: Coffee break\n16:00: What determines interactions in ecological networks?\n17:30: End of the working day\n\n\nTuesday April 24th 2024 - Network metrics and null models\n9:00: Metrics\n10:30: Coffee break\n11:00: Network models, null models\n12:00: Lunch break\n14:00: Complexity stability\n15:00: The structure of ecological networks: what do we know?\n16:00: Coffee break\n16:30: Group projects\n17:30: End of the working day\n\n\nWednesday April 25th 2024 - Generative Stochastic Models\n9:00: Introduction to block models\n10:30: Coffee break\n11:00: Selecting the number of blocks\n12:00: Lunch break\n14:00: The structure of ecological networks: what do we know? (2)\n15:00: Coffee break\n15:30: Group projects\n17:30: End of the working day\n\n\nThursday April 26th 2024 - Multilayer networks\n9:00: Multilayer networks in ecology\n10:30: Coffee break\n11:00: Multilayer in practice\n12:00: Lunch break\n14:00: Group projects\n17:30: End of the working day\n\n\nFriday April 27th 2024 - Opening and group presentations\n9:00: Motifs, embedding, collection of networks\n10:30: Coffee break\n11:00: finalizing presentations\n12:00: Lunch break at the CESAB\n14:00: Group project presentations\n16:30: End of the workshop",
     "crumbs": [
       "Welcome"
     ]
@@ -24,7 +24,7 @@
     "href": "index.html#prerequisites",
     "title": "Analyzing Ecological Networks",
     "section": "Prerequisites",
-    "text": "Prerequisites\n  Please follow this tutorial to install your working environment before attending the training course. Only R, RStudio Desktop, and Rtools (for Windows users) are required.",
+    "text": "Prerequisites\n  Please follow this tutorial to install your working environment before attending the training course. Only R, RStudio Desktop, and Rtools (for Windows users) are required for this course.\nYou also need to create an account on GitHub.",
     "crumbs": [
       "Welcome"
     ]
@@ -34,7 +34,7 @@
     "href": "index.html#material",
     "title": "Analyzing Ecological Networks",
     "section": "Material",
-    "text": "Material\nAll the material used in this training course (slides, data, exercises) is available at: https://github.com/econetoolbox/",
+    "text": "Material\nAll the material used in this training course (slides, data, exercises) will be available at: https://github.com/econetoolbox/",
     "crumbs": [
       "Welcome"
     ]
@@ -95,7 +95,7 @@
     "href": "chapters/install-packages.html",
     "title": "R packages to install",
     "section": "",
-    "text": "Here is a list of packages that you need to install so that you can follow the practicals. You can use install.packages(name-package).\n\nFor day 2\nlibrary(bipartite)\nlibrary(igraph)\nlibrary(FWebs)\nlibrary(vegan)\nlibrary(cheddar)\nlibrary(matlib)\nlibrary(sbm)\nlibrary(alluvial)\nlibrary(econetwork)\nlibrary(poweRlaw)\nMac users won’t be able to install the package FWebs. They can use this file with the needed functions.\nIn the course script, there is also an alternative to get the database of all food webs that are in this package, but it requires to have rmangal installed:\nlibrary(rmangal)\nmg1 &lt;- create.fw.list(db=“mg”, ref=TRUE, spatial = TRUE)\n\n\nFor day 3 and 4\nremotes::install_github(“Jo-Theo/shinySbm”)\nremotes::install_github(“Chabert-Liddell/colSBM”)\nlibrary(colSBM)\nlibrary(network)\nlibrary(GGally)\nlibrary(RColorBrewer)\nlibrary(knitr)",
+    "text": "Here is a list of packages that you need to install so that you can follow the practicals. You can use install.packages(name-package).\n\nFor day 2\n\nlibrary(bipartite)\nlibrary(igraph)\nlibrary(FWebs)\nlibrary(vegan)\nlibrary(cheddar)\nlibrary(matlib)\nlibrary(sbm)\nlibrary(alluvial)\nlibrary(econetwork)\nlibrary(poweRlaw)\n\nMac users won’t be able to install the package FWebs. They can use this file with the needed functions.\nIn the course script, there is also an alternative to get the database of all the food webs that are in this package, but it requires to have rmangal installed:\n\nlibrary(rmangal)\nmg1 &lt;- create.fw.list(db=\"mg\", ref=TRUE, spatial = TRUE)\n\n\n\nFor days 3 and 4\n\nremotes::install_github(\"Jo-Theo/shinySbm\")\nremotes::install_github(\"Chabert-Liddell/colSBM\")\nlibrary(colSBM)\nlibrary(network)\nlibrary(GGally)\nlibrary(RColorBrewer)\nlibrary(knitr)",
     "crumbs": [
       "PREREQUISITES",
       "R packages to install"

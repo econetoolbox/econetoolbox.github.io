@@ -9,7 +9,7 @@
 <meta name="author" content="Sonia Kefi">
 <meta name="author" content="Sophie Donnet">
 <meta name="author" content="Camille Coux">
-<meta name="dcterms.date" content="2024-04-16">
+<meta name="dcterms.date" content="2024-04-17">
 <meta name="description" content="FRB-CESAB &amp; ANR ECONET course     ">
 
 <title>Analyzing Ecological Networks</title>
@@ -123,8 +123,27 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">COURSES</span></span>
   </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">EXERCISES</span></span>
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">EXERCISES</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapters/day1_0_igraph.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">igraph exercise</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapters/day1_1_Graph_Exploration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Graph exploration</span></a>
+  </div>
+</li>
+      </ul>
   </li>
     </ul>
     </div>
@@ -138,7 +157,14 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
   <ul class="collapse">
-  <li><a href="#program" id="toc-program" class="nav-link" data-scroll-target="#program">Program</a></li>
+  <li><a href="#program" id="toc-program" class="nav-link" data-scroll-target="#program">Program</a>
+  <ul class="collapse">
+  <li><a href="#monday-april-22nd-2024-introduction" id="toc-monday-april-22nd-2024-introduction" class="nav-link" data-scroll-target="#monday-april-22nd-2024-introduction">Monday April 22nd 2024: Introduction</a></li>
+  <li><a href="#tuesday-april-24th-2024---network-metrics-and-null-models" id="toc-tuesday-april-24th-2024---network-metrics-and-null-models" class="nav-link" data-scroll-target="#tuesday-april-24th-2024---network-metrics-and-null-models">Tuesday April 24th 2024 - Network metrics and null models</a></li>
+  <li><a href="#wednesday-april-25th-2024---generative-stochastic-models" id="toc-wednesday-april-25th-2024---generative-stochastic-models" class="nav-link" data-scroll-target="#wednesday-april-25th-2024---generative-stochastic-models">Wednesday April 25th 2024 - Generative Stochastic Models</a></li>
+  <li><a href="#thursday-april-26th-2024---multilayer-networks" id="toc-thursday-april-26th-2024---multilayer-networks" class="nav-link" data-scroll-target="#thursday-april-26th-2024---multilayer-networks">Thursday April 26th 2024 - Multilayer networks</a></li>
+  <li><a href="#friday-april-27th-2024---opening-and-group-presentations" id="toc-friday-april-27th-2024---opening-and-group-presentations" class="nav-link" data-scroll-target="#friday-april-27th-2024---opening-and-group-presentations">Friday April 27th 2024 - Opening and group presentations</a></li>
+  </ul></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#material" id="toc-material" class="nav-link" data-scroll-target="#material">Material</a></li>
   <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation">Citation</a></li>
@@ -205,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 16, 2024</p>
+      <p class="date">April 17, 2024</p>
     </div>
   </div>
   
@@ -238,55 +264,70 @@ Registrations for the 2024 session are closed
 <section id="program" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="program">Program</h2>
 <p>Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4pm.</p>
-<table class="table">
-<colgroup>
-<col style="width: 22%">
-<col style="width: 69%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Monday</strong></td>
-<td><ul>
-<li>Introduction (Graphs, what’s a network?)</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><strong>Tuesday</strong></td>
-<td><ul>
-<li>Advanced metrics and null models</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><strong>Wednesday</strong></td>
-<td><ul>
-<li>Stochastic Block Models</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><strong>Thursday</strong></td>
-<td><ul>
-<li>Multilayer networks</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><strong>Friday</strong></td>
-<td><ul>
-<li>Subgroups projects</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+<section id="monday-april-22nd-2024-introduction" class="level3">
+<h3 class="anchored" data-anchor-id="monday-april-22nd-2024-introduction">Monday April 22nd 2024: Introduction</h3>
+<div class="line-block"><strong>9:00</strong>: <em>Welcome</em><br>
+<strong>9:30</strong>: Introduction to networks<br>
+<strong>9:30</strong>: <em>Coffee break</em><br>
+<strong>11:00</strong>: What kind of networks in ecology ?<br>
+<strong>11:30</strong>: How are ecological network data collected ?<br>
+<strong>12:00</strong>: <em>Lunch break</em><br>
+<strong>14:00</strong>: “Speed dating”<br>
+<strong>14:30</strong>: <code>igraph</code><br>
+<strong>15:30</strong>: <em>Coffee break</em><br>
+<strong>16:00</strong>: What determines interactions in ecological networks?<br>
+<strong>17:30</strong>: End of the working day</div>
+</section>
+<section id="tuesday-april-24th-2024---network-metrics-and-null-models" class="level3">
+<h3 class="anchored" data-anchor-id="tuesday-april-24th-2024---network-metrics-and-null-models">Tuesday April 24th 2024 - Network metrics and null models</h3>
+<div class="line-block"><strong>9:00</strong>: Metrics<br>
+<strong>10:30</strong>: <em>Coffee break</em><br>
+<strong>11:00</strong>: Network models, null models<br>
+<strong>12:00</strong>: <em>Lunch break</em><br>
+<strong>14:00</strong>: Complexity stability<br>
+<strong>15:00</strong>: The structure of ecological networks: what do we know?<br>
+<strong>16:00</strong>: <em>Coffee break</em><br>
+<strong>16:30</strong>: Group projects<br>
+<strong>17:30</strong>: End of the working day</div>
+</section>
+<section id="wednesday-april-25th-2024---generative-stochastic-models" class="level3">
+<h3 class="anchored" data-anchor-id="wednesday-april-25th-2024---generative-stochastic-models">Wednesday April 25th 2024 - Generative Stochastic Models</h3>
+<div class="line-block"><strong>9:00</strong>: Introduction to block models<br>
+<strong>10:30</strong>: <em>Coffee break</em><br>
+<strong>11:00</strong>: Selecting the number of blocks<br>
+<strong>12:00</strong>: <em>Lunch break</em><br>
+<strong>14:00</strong>: The structure of ecological networks: what do we know? (2)<br>
+<strong>15:00</strong>: <em>Coffee break</em><br>
+<strong>15:30</strong>: Group projects<br>
+<strong>17:30</strong>: End of the working day</div>
+</section>
+<section id="thursday-april-26th-2024---multilayer-networks" class="level3">
+<h3 class="anchored" data-anchor-id="thursday-april-26th-2024---multilayer-networks">Thursday April 26th 2024 - Multilayer networks</h3>
+<div class="line-block"><strong>9:00</strong>: Multilayer networks in ecology<br>
+<strong>10:30</strong>: <em>Coffee break</em><br>
+<strong>11:00</strong>: Multilayer in practice<br>
+<strong>12:00</strong>: <em>Lunch break</em><br>
+<strong>14:00</strong>: Group projects<br>
+<strong>17:30</strong>: End of the working day</div>
+</section>
+<section id="friday-april-27th-2024---opening-and-group-presentations" class="level3">
+<h3 class="anchored" data-anchor-id="friday-april-27th-2024---opening-and-group-presentations">Friday April 27th 2024 - Opening and group presentations</h3>
+<div class="line-block"><strong>9:00</strong>: Motifs, embedding, collection of networks<br>
+<strong>10:30</strong>: <em>Coffee break</em><br>
+<strong>11:00</strong>: finalizing presentations<br>
+<strong>12:00</strong>: <em>Lunch break at the CESAB</em><br>
+<strong>14:00</strong>: Group project presentations<br>
+<strong>16:30</strong>: End of the workshop</div>
+</section>
 </section>
 <section id="prerequisites" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Please follow this <a href="https://frbcesab.github.io/rsetup/">tutorial</a> to install your working environment <strong>before attending the training course</strong>. Only R, RStudio Desktop, and Rtools (for Windows users) are required.</p>
-<!-- 
-&nbsp; You also need to create an account on [GitHub](https://github.com/signup/).
--->
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Please follow this <a href="https://frbcesab.github.io/rsetup/">tutorial</a> to install your working environment <strong>before attending the training course</strong>. Only <code>R</code>, <code>RStudio Desktop</code>, and <code>Rtools</code> (for Windows users) are required for this course.</p>
+<p>You also need to create an account on <a href="https://github.com/signup/">GitHub</a>.</p>
 </section>
 <section id="material" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="material">Material</h2>
-<p>All the material used in this training course (slides, data, exercises) is available at: <a href="https://github.com/econetoolbox/" class="uri">https://github.com/econetoolbox/</a></p>
+<p>All the material used in this training course (slides, data, exercises) will be available at: <a href="https://github.com/econetoolbox/" class="uri">https://github.com/econetoolbox/</a></p>
 </section>
 <section id="citation" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="citation">Citation</h2>

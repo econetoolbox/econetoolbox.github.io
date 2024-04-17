@@ -21,11 +21,46 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../chapters/day1_0_igraph.html" rel="next">
 <link href="../chapters/setting-up-r.html" rel="prev">
 <link href="../images/logo-networks_150dpi.png" rel="icon" type="image/png">
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -119,8 +154,27 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">COURSES</span></span>
   </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">EXERCISES</span></span>
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">EXERCISES</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day1_0_igraph.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">igraph exercise</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day1_1_Graph_Exploration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Graph exploration</span></a>
+  </div>
+</li>
+      </ul>
   </li>
     </ul>
     </div>
@@ -133,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#for-day-2" id="toc-for-day-2" class="nav-link active" data-scroll-target="#for-day-2">For day 2</a></li>
-  <li><a href="#for-day-3-and-4" id="toc-for-day-3-and-4" class="nav-link" data-scroll-target="#for-day-3-and-4">For day 3 and 4</a></li>
+  <li><a href="#for-days-3-and-4" id="toc-for-days-3-and-4" class="nav-link" data-scroll-target="#for-days-3-and-4">For days 3 and 4</a></li>
   </ul>
 </nav>
     </div>
@@ -159,33 +213,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Here is a list of packages that you need to install so that you can follow the practicals. You can use install.packages(name-package).</p>
+<p>Here is a list of packages that you need to install so that you can follow the practicals. You can use <code>install.packages(name-package)</code>.</p>
 <section id="for-day-2" class="level3">
 <h3 class="anchored" data-anchor-id="for-day-2">For day 2</h3>
-<p>library(bipartite)</p>
-<p>library(igraph)</p>
-<p>library(FWebs)</p>
-<p>library(vegan)</p>
-<p>library(cheddar)</p>
-<p>library(matlib)</p>
-<p>library(sbm)</p>
-<p>library(alluvial)</p>
-<p>library(econetwork)</p>
-<p>library(poweRlaw)</p>
-<p>Mac users won’t be able to install the package FWebs. They can use this file with the needed functions.</p>
-<p>In the course script, there is also an alternative to get the database of all food webs that are in this package, but it requires to have rmangal installed:</p>
-<p>library(rmangal)</p>
-<p>mg1 &lt;- create.fw.list(db=“mg”, ref=TRUE, spatial = TRUE)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bipartite)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(igraph)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(FWebs)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vegan)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cheddar)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(matlib)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sbm)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(alluvial)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(econetwork)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(poweRlaw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Mac users won’t be able to install the package <code>FWebs</code>. They can use this file with the needed functions.</p>
+<p>In the course script, there is also an alternative to get the database of all the food webs that are in this package, but it requires to have <code>rmangal</code> installed:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rmangal)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mg1 <span class="ot">&lt;-</span> <span class="fu">create.fw.list</span>(<span class="at">db=</span><span class="st">"mg"</span>, <span class="at">ref=</span><span class="cn">TRUE</span>, <span class="at">spatial =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="for-day-3-and-4" class="level3">
-<h3 class="anchored" data-anchor-id="for-day-3-and-4">For day 3 and 4</h3>
-<p>remotes::install_github(“Jo-Theo/shinySbm”)</p>
-<p>remotes::install_github(“Chabert-Liddell/colSBM”)</p>
-<p>library(colSBM)</p>
-<p>library(network)</p>
-<p>library(GGally)</p>
-<p>library(RColorBrewer)</p>
-<p>library(knitr)</p>
+<section id="for-days-3-and-4" class="level3">
+<h3 class="anchored" data-anchor-id="for-days-3-and-4">For days 3 and 4</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"Jo-Theo/shinySbm"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"Chabert-Liddell/colSBM"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(colSBM)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(network)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GGally)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>
@@ -607,6 +667,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../chapters/day1_0_igraph.html" class="pagination-link" aria-label="igraph exercise">
+        <span class="nav-page-text">igraph exercise</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
