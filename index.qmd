@@ -36,7 +36,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 | **11:00**: What kind of networks in ecology ? 
 | **11:30**: How are ecological network data collected ? 
 | **12:00**: *Lunch break*
-| **14:00**: "Speed dating" 
+| **13:30**: "Speed dating" 
 | **14:30**: `igraph`
 | **15:30**: *Coffee break*
 | **16:00**: What determines interactions in ecological networks?
@@ -96,30 +96,19 @@ You also need to create an account on [GitHub](https://github.com/signup/).
 All the material used in this training course (slides, data, exercises) will be available at: <https://github.com/econetoolbox/>
 
 
-## Course organisers {.unnumbered}
+## The lecturers {.unnumbered}
 
-[Pierre BARBILLON](https://mia-ps.inrae.fr/pierre-barbillon) (AgroParisTech, INRAE, MIA  Paris Saclay)
-    
 [Sophie DONNET](https://sophiedonnet.github.io/) (INRAE, MIA Paris Saclay)
     
 [Sonia KEFI](https://biodicee.edu.umontpellier.fr/who-we-are/sonia-kefi/) (CNRS, ISEM, Montpellier)
     
 [François MASSOL](https://sites.google.com/a/polytechnique.org/francoismassol/home) (CNRS, CIIL, Lille)
 
-[Catherine MATIAS](https://cmatias.perso.math.cnrs.fr/) (CNRS, Univ. Sorbonne, campus UPMC, Jussieu)
-    
-[Sarah OUADAH](https://mia-ps.inrae.fr/sarah-ouadah) (AgroParisTech MIA Paris Saclay)
+[Catherine MATIAS](https://cmatias.perso.math.cnrs.fr/) (CNRS, Sorbonne U., Paris)
     
 [Elisa THEBAULT](https://iees-paris.fr/annuaire/thebault-elisa/) (CNRS, iEES, Paris)
 
- 
-
-
-
-
-## Citation {.unnumbered}
-
-> To do
+[Stéphane Robin](https://scj-robin.github.io/) (Sorbonne U., LPSM, Paris)
 
 
 ## Contributions {.unnumbered}
