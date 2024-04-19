@@ -104,7 +104,7 @@ All the material used in this training course (slides, data, exercises) will be 
     
 [François MASSOL](https://sites.google.com/a/polytechnique.org/francoismassol/home) (CNRS, CIIL, Lille)
 
-[Catherine MATIAS](https://cmatias.perso.math.cnrs.fr/) (CNRS, Sorbonne U., Paris)
+[Catherine MATIAS](https://cmatias.perso.math.cnrs.fr/) (CNRS, Sorbonne U., LPSM, Paris)
     
 [Elisa THEBAULT](https://iees-paris.fr/annuaire/thebault-elisa/) (CNRS, iEES, Paris)
 
