@@ -14,7 +14,7 @@
     "href": "index.html#program",
     "title": "Analyzing Ecological Networks",
     "section": "Program",
-    "text": "Program\nClasses will run from 9am to 5:30pm every day except Friday, when we finish at 4pm.\n\nMonday April 22nd 2024: Introduction\n9:00: Welcome\n9:30: Introduction to networks\n10:30: Coffee break\n11:00: What kind of networks in ecology ?\n11:30: How are ecological network data collected ?\n12:00: Lunch break\n14:00: “Speed dating”\n14:30: igraph\n15:30: Coffee break\n16:00: What determines interactions in ecological networks?\n17:30: End of the working day\n\n\nTuesday April 24th 2024 - Network metrics and null models\n9:00: Metrics\n10:30: Coffee break\n11:00: Network models, null models\n12:00: Lunch break\n14:00: Complexity stability\n15:00: The structure of ecological networks: what do we know?\n16:00: Coffee break\n16:30: Group projects\n17:30: End of the working day\n\n\nWednesday April 25th 2024 - Generative Stochastic Models\n9:00: Introduction to block models\n10:30: Coffee break\n11:00: Selecting the number of blocks\n12:00: Lunch break\n14:00: The structure of ecological networks: what do we know? (2)\n15:00: Coffee break\n15:30: Group projects\n17:30: End of the working day\n\n\nThursday April 26th 2024 - Multilayer networks\n9:00: Multilayer networks in ecology\n10:30: Coffee break\n11:00: Multilayer in practice\n12:00: Lunch break\n14:00: Group projects\n17:30: End of the working day\n\n\nFriday April 27th 2024 - Opening and group presentations\n9:00: Motifs, embedding, collection of networks\n10:30: Coffee break\n11:00: finalizing presentations\n12:00: Lunch break at the CESAB\n14:00: Group project presentations\n16:30: End of the workshop",
+    "text": "Program\nClasses will run from 9am to 5:30pm every day except Friday, when we finish at 4pm.\n\nMonday April 22nd 2024: Introduction\n9:00: Welcome\n9:30: Introduction to networks\n10:30: Coffee break\n11:00: What kind of networks in ecology ?\n11:30: How are ecological network data collected ?\n12:00: Lunch break\n13:30: “Speed dating”\n14:30: igraph\n15:30: Coffee break\n16:00: What determines interactions in ecological networks?\n17:30: End of the working day\n\n\nTuesday April 24th 2024 - Network metrics and null models\n9:00: Metrics\n10:30: Coffee break\n11:00: Network models, null models\n12:00: Lunch break\n14:00: Complexity stability\n15:00: The structure of ecological networks: what do we know?\n16:00: Coffee break\n16:30: Group projects\n17:30: End of the working day\n\n\nWednesday April 25th 2024 - Generative Stochastic Models\n9:00: Introduction to block models\n10:30: Coffee break\n11:00: Selecting the number of blocks\n12:00: Lunch break\n14:00: The structure of ecological networks: what do we know? (2)\n15:00: Coffee break\n15:30: Group projects\n17:30: End of the working day\n\n\nThursday April 26th 2024 - Multilayer networks\n9:00: Multilayer networks in ecology\n10:30: Coffee break\n11:00: Multilayer in practice\n12:00: Lunch break\n14:00: Group projects\n17:30: End of the working day\n\n\nFriday April 27th 2024 - Opening and group presentations\n9:00: Motifs, embedding, collection of networks\n10:30: Coffee break\n11:00: finalizing presentations\n12:00: Lunch break at the CESAB\n14:00: Group project presentations\n16:30: End of the workshop",
     "crumbs": [
       "Welcome"
     ]
@@ -40,21 +40,11 @@
     ]
   },
   {
-    "objectID": "index.html#course-organisers",
-    "href": "index.html#course-organisers",
+    "objectID": "index.html#the-lecturers",
+    "href": "index.html#the-lecturers",
     "title": "Analyzing Ecological Networks",
-    "section": "Course organisers",
-    "text": "Course organisers\nPierre BARBILLON (AgroParisTech, INRAE, MIA Paris Saclay)\nSophie DONNET (INRAE, MIA Paris Saclay)\nSonia KEFI (CNRS, ISEM, Montpellier)\nFrançois MASSOL (CNRS, CIIL, Lille)\nCatherine MATIAS (CNRS, Univ. Sorbonne, campus UPMC, Jussieu)\nSarah OUADAH (AgroParisTech MIA Paris Saclay)\nElisa THEBAULT (CNRS, iEES, Paris)",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#citation",
-    "href": "index.html#citation",
-    "title": "Analyzing Ecological Networks",
-    "section": "Citation",
-    "text": "Citation\n\nTo do",
+    "section": "The lecturers",
+    "text": "The lecturers\nSophie DONNET (INRAE, MIA Paris Saclay)\nSonia KEFI (CNRS, ISEM, Montpellier)\nFrançois MASSOL (CNRS, CIIL, Lille)\nCatherine MATIAS (CNRS, Sorbonne U., Paris)\nElisa THEBAULT (CNRS, iEES, Paris)\nStéphane Robin (Sorbonne U., LPSM, Paris)",
     "crumbs": [
       "Welcome"
     ]
