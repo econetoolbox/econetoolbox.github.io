@@ -52,10 +52,20 @@ book:
     - part: "COURSES"
     - part: "EXERCISES"
       chapters:
-        - text: igraph exercise
+        - text: Day 1 igraph exercise
           href: chapters/day1_0_igraph.html
-        - text: Graph exploration
+        - text: Day 1 graph exploration
           href: chapters/day1_1_Graph_Exploration.html
+        - text: Day 2 network structure
+          href: chapters/day2.html
+        - text: Day 3 SBM
+          href: chapters/day3_files/TutorialBM.html
+#        - chapters/TutorialBM.qmd
+        - text: Day 4 Multilevel
+          href: chapters/day4_files/TutorialDattilo.html
+#        - chapters/TutorialDattilo.qmd
+
+
 
     
 format:
