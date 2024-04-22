@@ -52,18 +52,20 @@ book:
     - part: "COURSES"
       chapters: 
         - chapters/day1_intro.qmd
+        - chapters/day1_what-eco-net.qmd
+        - chapters/day2_metrics.qmd
     - part: "EXERCISES"
       chapters:
-        - text: Day 1 igraph exercise
+        - text: (day 1) igraph exercise
           href: chapters/day1_0_igraph.html
-        - text: Day 1 graph exploration
+        - text: (day 1) graph exploration
           href: chapters/day1_1_Graph_Exploration.html
-        - text: Day 2 network structure
+        - text: (day 2) network structure
           href: chapters/day2.html
-        - text: Day 3 SBM
+        - text: (day 3) SBM
           href: chapters/day3_files/TutorialBM.html
 #        - chapters/TutorialBM.qmd
-        - text: Day 4 Multilevel
+        - text: (day 4) Multilevel
           href: chapters/day4_files/TutorialDattilo.html
 #        - chapters/TutorialDattilo.qmd
 
