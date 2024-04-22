@@ -93,7 +93,10 @@ You also need to create an account on [GitHub](https://github.com/signup/).
 
 ## Material {.unnumbered}
 
-All the material used in this training course (slides, data, exercises) will be available at: <https://github.com/econetoolbox/>
+Exercises done during the training course are available at: <https://github.com/econetoolbox/>
+
+All the data and extra functions needed during the course are available at:
+<https://github.com/econetoolbox/data>
 
 
 ## The lecturers {.unnumbered}

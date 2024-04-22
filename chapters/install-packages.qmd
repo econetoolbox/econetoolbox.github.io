@@ -20,9 +20,11 @@ library(poweRlaw)
 
 
 
-Mac users won't be able to install the package `FWebs`. They can use this file with the needed functions. 
+Mac users won't be able to install the package `FWebs`. They can use the file `crutch_functions.R` (available on the [data repository of the course](https://github.com/econetoolbox/data/) in the day2_files folder), which contains the needed functions. 
+
 
 In the course script, there is also an alternative to get the database of all the food webs that are in this package, but it requires to have `rmangal` installed:
+
 
 ```{r, eval=FALSE}
 
