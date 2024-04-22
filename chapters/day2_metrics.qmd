@@ -1,0 +1,16 @@
+
+::: {.callout-note icon=true appearance="simple"}
+## (day 2) Network metrics {.unnumbered}
+
+<br />
+{{< fa user >}} &nbsp;**Author:** [François Massol](https://sites.google.com/a/polytechnique.org/francoismassol/home?pli=1)<br/>
+{{< fa brands github >}} &nbsp;**Source:** <https://github.com/econetoolbox/data/tree/main/day2_files/><br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://econettoolbox.github.io/chapters/cours/day2_cours_metrics.pdf>
+:::
+
+
+<br />
+
+<div class="container">
+  <iframe class="responsive-iframe" src="cours/day2_cours_metrics.pdf"></iframe>
+</div> 
