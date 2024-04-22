@@ -115,12 +115,34 @@
   {
     "objectID": "chapters/day1_what-eco-net.html",
     "href": "chapters/day1_what-eco-net.html",
-    "title": "(day 1) What networks in ecology? I",
+    "title": "(day 1) What networks in ecology?",
     "section": "",
     "text": "Author: Sonia Kéfi   Slides: https://econettoolbox.github.io/chapters/cours/day1_cours2_WhatNetworks.pdf",
     "crumbs": [
       "COURSES",
-      "(day 1) What networks in ecology? I"
+      "(day 1) What networks in ecology?"
+    ]
+  },
+  {
+    "objectID": "chapters/day1_what-eco-net2.html",
+    "href": "chapters/day1_what-eco-net2.html",
+    "title": "(day 1) What data?",
+    "section": "",
+    "text": "Author: Elisa Thébault   Slides: https://econettoolbox.github.io/chapters/cours/day1_cours3_WhatNetworks.pdf",
+    "crumbs": [
+      "COURSES",
+      "(day 1) What data?"
+    ]
+  },
+  {
+    "objectID": "chapters/day1_why-net.html",
+    "href": "chapters/day1_why-net.html",
+    "title": "(day 1) Why ecological networks?",
+    "section": "",
+    "text": "Author: Elisa Thébault   Slides: https://econettoolbox.github.io/chapters/cours/day1_cours4_WhyNetworks.pdf",
+    "crumbs": [
+      "COURSES",
+      "(day 1) Why ecological networks?"
     ]
   },
   {
