@@ -1,3 +1,16 @@
+
+::: {.callout-note icon=true appearance="simple"}
 ## Introduction to networks {.unnumbered}
 
-![Slides](chapters/cours/day1_cours1_intro.pdf)
+<br />
+{{< fa user >}} &nbsp;**Author:** [Catherine Matias](http://cmatias.perso.math.cnrs.fr/)<br/>
+{{< fa brands github >}} &nbsp;**Source:** <https://github.com/econetoolbox/data/tree/main/day1_files/><br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://econettoolbox.github.io/chapters/cours/day1_cours1_intro.pdf>
+:::
+
+
+<br />
+
+<div class="container">
+  <iframe class="responsive-iframe" src="cours/day1_cours1_intro.pdf"></iframe>
+</div> 
