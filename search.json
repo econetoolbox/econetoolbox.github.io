@@ -104,12 +104,12 @@
   {
     "objectID": "chapters/day1_intro.html",
     "href": "chapters/day1_intro.html",
-    "title": "(day 2) Network metrics",
+    "title": "(day 1) Introduction to networks",
     "section": "",
-    "text": "Author: François Massol   Source: https://github.com/econetoolbox/data/tree/main/day2_files/   Slides: https://econettoolbox.github.io/chapters/cours/day2_cours_metrics.pdf",
+    "text": "Author: Catherine Matias   Source: https://github.com/econetoolbox/data/tree/main/day1_files/   Slides: https://econettoolbox.github.io/chapters/cours/day1_cours1_intro.pdf",
     "crumbs": [
       "COURSES",
-      "(day 2) Network metrics"
+      "(day 1) Introduction to networks"
     ]
   },
   {
@@ -132,6 +132,28 @@
     "crumbs": [
       "COURSES",
       "(day 2) Network metrics"
+    ]
+  },
+  {
+    "objectID": "chapters/day3_sbm.html",
+    "href": "chapters/day3_sbm.html",
+    "title": "(day 3) SBM",
+    "section": "",
+    "text": "Author: Sophie Donnet   Source: https://github.com/econetoolbox/data/tree/main/day3_files/   Slides: https://econettoolbox.github.io/chapters/cours/day3_cours_SBM_LBM.pdf",
+    "crumbs": [
+      "COURSES",
+      "(day 3) SBM"
+    ]
+  },
+  {
+    "objectID": "chapters/day4_multilevel.html",
+    "href": "chapters/day4_multilevel.html",
+    "title": "(day 3) multilevel",
+    "section": "",
+    "text": "Author: Sophie Donnet   Source: https://github.com/econetoolbox/data/tree/main/day4_files/   Slides: https://econettoolbox.github.io/chapters/cours/day4_cours_multilevels.pdf",
+    "crumbs": [
+      "COURSES",
+      "(day 3) multilevel"
     ]
   }
 ]
