@@ -34,7 +34,7 @@
     "href": "index.html#material",
     "title": "Analyzing Ecological Networks",
     "section": "Material",
-    "text": "Material\nAll the material used in this training course (slides, data, exercises) will be available at: https://github.com/econetoolbox/",
+    "text": "Material\nExercises done during the training course are available at: https://github.com/econetoolbox/\nAll the data and extra functions needed during the course are available at: https://github.com/econetoolbox/data",
     "crumbs": [
       "Welcome"
     ]
@@ -95,7 +95,7 @@
     "href": "chapters/install-packages.html",
     "title": "R packages to install",
     "section": "",
-    "text": "Here is a list of packages that you need to install so that you can follow the practicals. You can use install.packages(name-package).\n\nFor day 2\n\nlibrary(bipartite)\nlibrary(igraph)\nlibrary(FWebs)\nlibrary(vegan)\nlibrary(cheddar)\nlibrary(matlib)\nlibrary(sbm)\nlibrary(alluvial)\nlibrary(econetwork)\nlibrary(poweRlaw)\n\nMac users won’t be able to install the package FWebs. They can use this file with the needed functions.\nIn the course script, there is also an alternative to get the database of all the food webs that are in this package, but it requires to have rmangal installed:\n\nlibrary(rmangal)\nmg1 &lt;- create.fw.list(db=\"mg\", ref=TRUE, spatial = TRUE)\n\n\n\nFor days 3 and 4\n\nremotes::install_github(\"Jo-Theo/shinySbm\")\nremotes::install_github(\"Chabert-Liddell/colSBM\")\nlibrary(colSBM)\nlibrary(network)\nlibrary(GGally)\nlibrary(RColorBrewer)\nlibrary(knitr)",
+    "text": "Here is a list of packages that you need to install so that you can follow the practicals. You can use install.packages(name-package).\n\nFor day 2\n\nlibrary(bipartite)\nlibrary(igraph)\nlibrary(FWebs)\nlibrary(vegan)\nlibrary(cheddar)\nlibrary(matlib)\nlibrary(sbm)\nlibrary(alluvial)\nlibrary(econetwork)\nlibrary(poweRlaw)\n\nMac users won’t be able to install the package FWebs. They can use the file crutch_functions.R (available on the data repository of the course in the day2_files folder), which contains the needed functions.\nIn the course script, there is also an alternative to get the database of all the food webs that are in this package, but it requires to have rmangal installed:\n\nlibrary(rmangal)\nmg1 &lt;- create.fw.list(db=\"mg\", ref=TRUE, spatial = TRUE)\n\n\n\nFor days 3 and 4\n\nremotes::install_github(\"Jo-Theo/shinySbm\")\nremotes::install_github(\"Chabert-Liddell/colSBM\")\nlibrary(colSBM)\nlibrary(network)\nlibrary(GGally)\nlibrary(RColorBrewer)\nlibrary(knitr)",
     "crumbs": [
       "PREREQUISITES",
       "R packages to install"
