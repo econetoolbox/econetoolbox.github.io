@@ -148,12 +148,23 @@
   {
     "objectID": "chapters/day4_multilevel.html",
     "href": "chapters/day4_multilevel.html",
-    "title": "(day 3) multilevel",
+    "title": "(day 4) multilevel",
     "section": "",
     "text": "Author: Sophie Donnet   Source: https://github.com/econetoolbox/data/tree/main/day4_files/   Slides: https://econettoolbox.github.io/chapters/cours/day4_cours_multilevels.pdf",
     "crumbs": [
       "COURSES",
-      "(day 3) multilevel"
+      "(day 4) multilevel"
+    ]
+  },
+  {
+    "objectID": "chapters/day5_collection.html",
+    "href": "chapters/day5_collection.html",
+    "title": "(day 5) Collection of networks",
+    "section": "",
+    "text": "Author: Sophie Donnet   Slides: https://econettoolbox.github.io/chapters/cours/day5_cours_collection.pdf",
+    "crumbs": [
+      "COURSES",
+      "(day 5) Collection of networks"
     ]
   }
 ]
