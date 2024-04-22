@@ -104,12 +104,34 @@
   {
     "objectID": "chapters/day1_intro.html",
     "href": "chapters/day1_intro.html",
-    "title": "Introduction to networks",
+    "title": "(day 2) Network metrics",
     "section": "",
-    "text": "Author: Catherine Matias   Source: https://github.com/econetoolbox/data/tree/main/day1_files/   Slides: https://econettoolbox.github.io/chapters/cours/day1_cours1_intro.pdf",
+    "text": "Author: François Massol   Source: https://github.com/econetoolbox/data/tree/main/day2_files/   Slides: https://econettoolbox.github.io/chapters/cours/day2_cours_metrics.pdf",
     "crumbs": [
       "COURSES",
-      "Introduction to networks"
+      "(day 2) Network metrics"
+    ]
+  },
+  {
+    "objectID": "chapters/day1_what-eco-net.html",
+    "href": "chapters/day1_what-eco-net.html",
+    "title": "(day 1) What networks in ecology? I",
+    "section": "",
+    "text": "Author: Sonia Kéfi   Slides: https://econettoolbox.github.io/chapters/cours/day1_cours2_WhatNetworks.pdf",
+    "crumbs": [
+      "COURSES",
+      "(day 1) What networks in ecology? I"
+    ]
+  },
+  {
+    "objectID": "chapters/day2_metrics.html",
+    "href": "chapters/day2_metrics.html",
+    "title": "(day 2) Network metrics",
+    "section": "",
+    "text": "Author: François Massol   Source: https://github.com/econetoolbox/data/tree/main/day2_files/   Slides: https://econettoolbox.github.io/chapters/cours/day2_cours_metrics.pdf",
+    "crumbs": [
+      "COURSES",
+      "(day 2) Network metrics"
     ]
   }
 ]

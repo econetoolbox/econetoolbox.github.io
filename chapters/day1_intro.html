@@ -8,7 +8,7 @@
 
 <meta name="description" content="FRB-CESAB &amp; ANR ECONET course     ">
 
-<title>Analyzing Ecological Networks - Introduction to networks</title>
+<title>Analyzing Ecological Networks - (day 2) Network metrics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,7 +26,7 @@ ul.task-list li input[type="checkbox"] {
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<link href="../chapters/day1_0_igraph.html" rel="next">
+<link href="../chapters/day1_what-eco-net.html" rel="next">
 <link href="../chapters/install-packages.html" rel="prev">
 <link href="../images/logo-networks_150dpi.png" rel="icon" type="image/png">
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_intro.html">COURSES</a></li><li class="breadcrumb-item"><a href="../chapters/day1_intro.html">Introduction to networks</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_intro.html">COURSES</a></li><li class="breadcrumb-item"><a href="../chapters/day1_intro.html">(day 2) Network metrics</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -127,7 +127,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/day1_intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Introduction to networks</span></a>
+ <span class="menu-text">(day 2) Network metrics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day1_what-eco-net.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 1) What networks in ecology? I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day2_metrics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 2) Network metrics</span></a>
   </div>
 </li>
       </ul>
@@ -144,31 +156,31 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/day1_0_igraph.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Day 1 igraph exercise</span></a>
+ <span class="menu-text">(day 1) igraph exercise</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/day1_1_Graph_Exploration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Day 1 graph exploration</span></a>
+ <span class="menu-text">(day 1) graph exploration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/day2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Day 2 network structure</span></a>
+ <span class="menu-text">(day 2) network structure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/day3_files/TutorialBM.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Day 3 SBM</span></a>
+ <span class="menu-text">(day 3) SBM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/day4_files/TutorialDattilo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Day 4 Multilevel</span></a>
+ <span class="menu-text">(day 4) Multilevel</span></a>
   </div>
 </li>
       </ul>
@@ -184,9 +196,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_intro.html">COURSES</a></li><li class="breadcrumb-item"><a href="../chapters/day1_intro.html">Introduction to networks</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_intro.html">COURSES</a></li><li class="breadcrumb-item"><a href="../chapters/day1_intro.html">(day 2) Network metrics</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction to networks</h1>
+<h1 class="title">(day 2) Network metrics</h1>
 </div>
 
 
@@ -209,13 +221,13 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><br> <i class="fa-solid fa-user" aria-label="user"></i> &nbsp;<strong>Author:</strong> <a href="http://cmatias.perso.math.cnrs.fr/">Catherine Matias</a><br> <i class="fa-brands fa-github" aria-label="github"></i> &nbsp;<strong>Source:</strong> <a href="https://github.com/econetoolbox/data/tree/main/day1_files/" class="uri">https://github.com/econetoolbox/data/tree/main/day1_files/</a><br> <i class="fa-solid fa-globe" aria-label="globe"></i> &nbsp;<strong>Slides:</strong> <a href="https://econettoolbox.github.io/chapters/cours/day1_cours1_intro.pdf" class="uri">https://econettoolbox.github.io/chapters/cours/day1_cours1_intro.pdf</a></p>
+<p><br> <i class="fa-solid fa-user" aria-label="user"></i> &nbsp;<strong>Author:</strong> <a href="http://cmatias.perso.math.cnrs.fr/">François Massol</a><br> <i class="fa-brands fa-github" aria-label="github"></i> &nbsp;<strong>Source:</strong> <a href="https://github.com/econetoolbox/data/tree/main/day2_files/" class="uri">https://github.com/econetoolbox/data/tree/main/day2_files/</a><br> <i class="fa-solid fa-globe" aria-label="globe"></i> &nbsp;<strong>Slides:</strong> <a href="https://econettoolbox.github.io/chapters/cours/day2_cours_metrics.pdf" class="uri">https://econettoolbox.github.io/chapters/cours/day2_cours_metrics.pdf</a></p>
 </div>
 </div>
 </div>
 <p><br></p>
 <div class="container">
-<p><iframe class="responsive-iframe" src="cours/day1_cours1_intro.pdf"></iframe></p>
+<p><iframe class="responsive-iframe" src="cours/day2_cours_metrics.pdf"></iframe></p>
 </div>
 
 
@@ -637,8 +649,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/day1_0_igraph.html" class="pagination-link" aria-label="Day 1 igraph exercise">
-        <span class="nav-page-text">Day 1 igraph exercise</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/day1_what-eco-net.html" class="pagination-link" aria-label="(day 1) What networks in ecology? I">
+        <span class="nav-page-text">(day 1) What networks in ecology? I</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
