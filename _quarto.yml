@@ -50,6 +50,8 @@ book:
         - chapters/setting-up-r.qmd
         - chapters/install-packages.qmd
     - part: "COURSES"
+      chapters: 
+        - chapters/day1_intro.qmd
     - part: "EXERCISES"
       chapters:
         - text: Day 1 igraph exercise
@@ -69,7 +71,7 @@ book:
 
     
 format:
-  html:
+  html: 
     theme: [cosmo, css/styles.css]
     code-copy: true
     code-line-numbers: false
