@@ -56,6 +56,7 @@ book:
         - chapters/day2_metrics.qmd
         - chapters/day3_sbm.qmd
         - chapters/day4_multilevel.qmd
+        - chapters/day5_collection.qmd
     - part: "EXERCISES"
       chapters:
         - text: (day 1) igraph exercise
