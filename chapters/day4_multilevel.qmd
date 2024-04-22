@@ -1,0 +1,17 @@
+
+::: {.callout-note icon=true appearance="simple"}
+## (day 3) multilevel {.unnumbered}
+
+<br />
+{{< fa user >}} &nbsp;**Author:** [Sophie Donnet](https://sophiedonnet.github.io/)<br/>
+{{< fa brands github >}} &nbsp;**Source:** <https://github.com/econetoolbox/data/tree/main/day4_files/><br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://econettoolbox.github.io/chapters/cours/day4_cours_multilevels.pdf>
+:::
+
+
+<br />
+
+<div class="container">
+  <iframe class="responsive-iframe" src="cours/day4_cours_multilevels.pdf"></iframe>
+</div> 
+

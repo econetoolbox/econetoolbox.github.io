@@ -54,6 +54,8 @@ book:
         - chapters/day1_intro.qmd
         - chapters/day1_what-eco-net.qmd
         - chapters/day2_metrics.qmd
+        - chapters/day3_sbm.qmd
+        - chapters/day4_multilevel.qmd
     - part: "EXERCISES"
       chapters:
         - text: (day 1) igraph exercise
@@ -65,7 +67,7 @@ book:
         - text: (day 3) SBM
           href: chapters/day3_files/TutorialBM.html
 #        - chapters/TutorialBM.qmd
-        - text: (day 4) Multilevel
+        - text: (day 4) multilevel
           href: chapters/day4_files/TutorialDattilo.html
 #        - chapters/TutorialDattilo.qmd
 
