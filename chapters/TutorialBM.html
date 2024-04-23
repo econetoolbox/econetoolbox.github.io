@@ -6,11 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Econet group">
-<meta name="dcterms.date" content="2024-04-24">
 <meta name="description" content="FRB-CESAB &amp; ANR ECONET course     ">
 
-<title>Analyzing Ecological Networks - 1&nbsp; Tutorial on Stochastic Block Models</title>
+<title>Analyzing Ecological Networks - Tutorial on Stochastic Block Models</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -154,7 +152,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_0_igraph.html">EXERCISES</a></li><li class="breadcrumb-item"><a href="../chapters/TutorialBM.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">(day 3) SBM</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_0_igraph.html">EXERCISES</a></li><li class="breadcrumb-item"><a href="../chapters/TutorialBM.html">(day 3) SBM</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -241,6 +239,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/day2_complex-stab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 1) Why ecological networks?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/day3_sbm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(day 3) SBM</span></a>
   </div>
@@ -289,13 +293,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/TutorialBM.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">(day 3) SBM</span></span></a>
+ <span class="menu-text">(day 3) SBM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/TutorialDattilo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">(day 4) multilevel</span></span></a>
+ <span class="menu-text">(day 4) multilevel</span></a>
   </div>
 </li>
       </ul>
@@ -310,26 +314,26 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements"><span class="header-section-number">2</span> 0.Requirements</a></li>
-  <li><a href="#simulating-network-data" id="toc-simulating-network-data" class="nav-link" data-scroll-target="#simulating-network-data"><span class="header-section-number">3</span> 1. Simulating network data</a>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements">0.Requirements</a></li>
+  <li><a href="#simulating-network-data" id="toc-simulating-network-data" class="nav-link" data-scroll-target="#simulating-network-data">1. Simulating network data</a>
   <ul class="collapse">
-  <li><a href="#a.-community-network" id="toc-a.-community-network" class="nav-link" data-scroll-target="#a.-community-network"><span class="header-section-number">3.1</span> 1.A. Community network</a></li>
-  <li><a href="#b.-bipartite-networks" id="toc-b.-bipartite-networks" class="nav-link" data-scroll-target="#b.-bipartite-networks"><span class="header-section-number">3.2</span> 1.B. Bipartite networks</a></li>
+  <li><a href="#a.-community-network" id="toc-a.-community-network" class="nav-link" data-scroll-target="#a.-community-network">1.A. Community network</a></li>
+  <li><a href="#b.-bipartite-networks" id="toc-b.-bipartite-networks" class="nav-link" data-scroll-target="#b.-bipartite-networks">1.B. Bipartite networks</a></li>
   </ul></li>
-  <li><a href="#analyzing-an-ecological-data-set" id="toc-analyzing-an-ecological-data-set" class="nav-link" data-scroll-target="#analyzing-an-ecological-data-set"><span class="header-section-number">4</span> 2. Analyzing an ecological data set</a>
+  <li><a href="#analyzing-an-ecological-data-set" id="toc-analyzing-an-ecological-data-set" class="nav-link" data-scroll-target="#analyzing-an-ecological-data-set">2. Analyzing an ecological data set</a>
   <ul class="collapse">
-  <li><a href="#a.-the-data-set-antagonistic-treefungus-interaction-network" id="toc-a.-the-data-set-antagonistic-treefungus-interaction-network" class="nav-link" data-scroll-target="#a.-the-data-set-antagonistic-treefungus-interaction-network"><span class="header-section-number">4.1</span> 2.A. The data set: antagonistic tree/fungus interaction network</a></li>
-  <li><a href="#b.-analysis-of-the-treetree-data" id="toc-b.-analysis-of-the-treetree-data" class="nav-link" data-scroll-target="#b.-analysis-of-the-treetree-data"><span class="header-section-number">4.2</span> 2.B. Analysis of the tree/tree data</a>
+  <li><a href="#a.-the-data-set-antagonistic-treefungus-interaction-network" id="toc-a.-the-data-set-antagonistic-treefungus-interaction-network" class="nav-link" data-scroll-target="#a.-the-data-set-antagonistic-treefungus-interaction-network">2.A. The data set: antagonistic tree/fungus interaction network</a></li>
+  <li><a href="#b.-analysis-of-the-treetree-data" id="toc-b.-analysis-of-the-treetree-data" class="nav-link" data-scroll-target="#b.-analysis-of-the-treetree-data">2.B. Analysis of the tree/tree data</a>
   <ul class="collapse">
-  <li><a href="#b.1-tree-tree-binary-interaction-networks" id="toc-b.1-tree-tree-binary-interaction-networks" class="nav-link" data-scroll-target="#b.1-tree-tree-binary-interaction-networks"><span class="header-section-number">4.2.1</span> 2.B.1 Tree-tree binary interaction networks</a></li>
-  <li><a href="#b.3-analysis-of-the-weighted-interaction-network" id="toc-b.3-analysis-of-the-weighted-interaction-network" class="nav-link" data-scroll-target="#b.3-analysis-of-the-weighted-interaction-network"><span class="header-section-number">4.2.2</span> 2.B.3 Analysis of the weighted interaction network</a></li>
-  <li><a href="#b.4-introduction-of-covariates" id="toc-b.4-introduction-of-covariates" class="nav-link" data-scroll-target="#b.4-introduction-of-covariates"><span class="header-section-number">4.2.3</span> 2.B.4 Introduction of covariates</a></li>
+  <li><a href="#b.1-tree-tree-binary-interaction-networks" id="toc-b.1-tree-tree-binary-interaction-networks" class="nav-link" data-scroll-target="#b.1-tree-tree-binary-interaction-networks">2.B.1 Tree-tree binary interaction networks</a></li>
+  <li><a href="#b.3-analysis-of-the-weighted-interaction-network" id="toc-b.3-analysis-of-the-weighted-interaction-network" class="nav-link" data-scroll-target="#b.3-analysis-of-the-weighted-interaction-network">2.B.3 Analysis of the weighted interaction network</a></li>
+  <li><a href="#b.4-introduction-of-covariates" id="toc-b.4-introduction-of-covariates" class="nav-link" data-scroll-target="#b.4-introduction-of-covariates">2.B.4 Introduction of covariates</a></li>
   </ul></li>
-  <li><a href="#c-analysis-of-the-treefungi-data" id="toc-c-analysis-of-the-treefungi-data" class="nav-link" data-scroll-target="#c-analysis-of-the-treefungi-data"><span class="header-section-number">4.3</span> 2.C Analysis of the tree/fungi data</a></li>
+  <li><a href="#c-analysis-of-the-treefungi-data" id="toc-c-analysis-of-the-treefungi-data" class="nav-link" data-scroll-target="#c-analysis-of-the-treefungi-data">2.C Analysis of the tree/fungi data</a></li>
   </ul></li>
-  <li><a href="#the-shiny-application" id="toc-the-shiny-application" class="nav-link" data-scroll-target="#the-shiny-application"><span class="header-section-number">5</span> 3. The Shiny application</a>
+  <li><a href="#the-shiny-application" id="toc-the-shiny-application" class="nav-link" data-scroll-target="#the-shiny-application">3. The Shiny application</a>
   <ul class="collapse">
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">5.1</span> References</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -337,29 +341,16 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_0_igraph.html">EXERCISES</a></li><li class="breadcrumb-item"><a href="../chapters/TutorialBM.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">(day 3) SBM</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_0_igraph.html">EXERCISES</a></li><li class="breadcrumb-item"><a href="../chapters/TutorialBM.html">(day 3) SBM</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Tutorial on Stochastic Block Models</span></h1>
-<p class="subtitle lead">April 2024</p>
+<h1 class="title">Tutorial on Stochastic Block Models</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Econet group </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 24, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -369,8 +360,8 @@ window.Quarto = {
 </header>
 
 
-<section id="requirements" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 0.Requirements</h1>
+<section id="requirements" class="level1 unnumbered">
+<h1 class="unnumbered">0.Requirements</h1>
 <p>This tutorial illustrates the use of block models for the analysis of (ecological) network. Is is mainly based on the vignette of the package <code>sbm</code>. The package is on the CRAN. Its development version is on <a href="https://github.com/GrossSBM/sbm">Github</a>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"sbm"</span>)</span>
@@ -389,11 +380,11 @@ window.Quarto = {
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="simulating-network-data" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 1. Simulating network data</h1>
+<section id="simulating-network-data" class="level1 unnumbered">
+<h1 class="unnumbered">1. Simulating network data</h1>
 <p>Let us first simulate networks using the <code>sbm</code> package.</p>
-<section id="a.-community-network" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="a.-community-network"><span class="header-section-number">3.1</span> 1.A. Community network</h2>
+<section id="a.-community-network" class="level2">
+<h2 class="anchored" data-anchor-id="a.-community-network">1.A. Community network</h2>
 <p>First define the parameters.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>K <span class="ot">=</span> <span class="dv">3</span>;  <span class="co"># nb of blocks</span></span>
@@ -472,8 +463,8 @@ window.Quarto = {
 </div>
 <p><strong>Exercice</strong> Modify the structure by choosing other parameters and compute the statistics that you learned the previous days. Use <code>igraph</code> to plot your new networks. For instance, you may try to simulate a foodweb with 5 trophic levels.</p>
 </section>
-<section id="b.-bipartite-networks" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="b.-bipartite-networks"><span class="header-section-number">3.2</span> 1.B. Bipartite networks</h2>
+<section id="b.-bipartite-networks" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="b.-bipartite-networks">1.B. Bipartite networks</h2>
 <p><strong>Exercice</strong> Use the function <code>sampleBipartiteSBM</code> to simulate a weighted (counts) bipartite network with the following parameters.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>K <span class="ot">=</span> <span class="dv">3</span>;  <span class="co"># nb of blocks</span></span>
@@ -486,10 +477,10 @@ window.Quarto = {
 </div>
 </section>
 </section>
-<section id="analyzing-an-ecological-data-set" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 2. Analyzing an ecological data set</h1>
-<section id="a.-the-data-set-antagonistic-treefungus-interaction-network" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="a.-the-data-set-antagonistic-treefungus-interaction-network"><span class="header-section-number">4.1</span> 2.A. The data set: antagonistic tree/fungus interaction network</h2>
+<section id="analyzing-an-ecological-data-set" class="level1 unnumbered">
+<h1 class="unnumbered">2. Analyzing an ecological data set</h1>
+<section id="a.-the-data-set-antagonistic-treefungus-interaction-network" class="level2">
+<h2 class="anchored" data-anchor-id="a.-the-data-set-antagonistic-treefungus-interaction-network">2.A. The data set: antagonistic tree/fungus interaction network</h2>
 <p>We consider the fungus-tree interaction network studied by <span class="citation" data-cites="tree_fungus_network">Vacher, Piou, and Desprez-Loustau (<a href="#ref-tree_fungus_network" role="doc-biblioref">2008</a>)</span>, available with the package <code>sbm</code> :</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"fungusTreeNetwork"</span>)</span>
@@ -511,10 +502,10 @@ window.Quarto = {
 </ul>
 <p>We first consider the tree-tree interactions resulting into a Simple Network. Then we consider the bipartite network between trees and fungi.</p>
 </section>
-<section id="b.-analysis-of-the-treetree-data" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="b.-analysis-of-the-treetree-data"><span class="header-section-number">4.2</span> 2.B. Analysis of the tree/tree data</h2>
-<section id="b.1-tree-tree-binary-interaction-networks" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="b.1-tree-tree-binary-interaction-networks"><span class="header-section-number">4.2.1</span> 2.B.1 Tree-tree binary interaction networks</h3>
+<section id="b.-analysis-of-the-treetree-data" class="level2">
+<h2 class="anchored" data-anchor-id="b.-analysis-of-the-treetree-data">2.B. Analysis of the tree/tree data</h2>
+<section id="b.1-tree-tree-binary-interaction-networks" class="level3">
+<h3 class="anchored" data-anchor-id="b.1-tree-tree-binary-interaction-networks">2.B.1 Tree-tree binary interaction networks</h3>
 <p>We first consider the binary network where an edge is drawn between two trees when they do share a least one common fungi:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>tree_tree_binary <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">*</span> (fungusTreeNetwork<span class="sc">$</span>tree_tree <span class="sc">!=</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -725,8 +716,8 @@ window.Quarto = {
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>mySimpleSBM<span class="sc">$</span><span class="fu">setModel</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="b.3-analysis-of-the-weighted-interaction-network" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="b.3-analysis-of-the-weighted-interaction-network"><span class="header-section-number">4.2.2</span> 2.B.3 Analysis of the weighted interaction network</h3>
+<section id="b.3-analysis-of-the-weighted-interaction-network" class="level3">
+<h3 class="anchored" data-anchor-id="b.3-analysis-of-the-weighted-interaction-network">2.B.3 Analysis of the weighted interaction network</h3>
 <p>Instead of considering the binary network tree-tree we may consider the weighted network where the link between two trees is the number of fungi they share.</p>
 <p>We plot the matrix with function <code>plotMyMatrix</code>:</p>
 <div class="cell">
@@ -947,8 +938,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="b.4-introduction-of-covariates" class="level3" data-number="4.2.3">
-<h3 data-number="4.2.3" class="anchored" data-anchor-id="b.4-introduction-of-covariates"><span class="header-section-number">4.2.3</span> 2.B.4 Introduction of covariates</h3>
+<section id="b.4-introduction-of-covariates" class="level3">
+<h3 class="anchored" data-anchor-id="b.4-introduction-of-covariates">2.B.4 Introduction of covariates</h3>
 <p>We have on each pair of trees 3 covariates, namely the genetic distance, the taxonomic distance and the geographic distance. Each covariate has to be introduced as a matrix: <span class="math inline">\(X^k_{ij}\)</span> corresponds to the value of the <span class="math inline">\(k\)</span>-th covariate describing the couple <span class="math inline">\((i,j)\)</span>.</p>
 <p>We can also use the <code>sbm</code> package to estimate the parameters of the SBM with covariates.</p>
 <span class="math display">\[\begin{align*}
@@ -1110,8 +1101,8 @@ window.Quarto = {
 </div>
 </section>
 </section>
-<section id="c-analysis-of-the-treefungi-data" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="c-analysis-of-the-treefungi-data"><span class="header-section-number">4.3</span> 2.C Analysis of the tree/fungi data</h2>
+<section id="c-analysis-of-the-treefungi-data" class="level2">
+<h2 class="anchored" data-anchor-id="c-analysis-of-the-treefungi-data">2.C Analysis of the tree/fungi data</h2>
 <p>We now analyze the bipartite tree/fungi interactions. The incidence matrix can be plotted with the function </p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotMyMatrix</span>(fungusTreeNetwork<span class="sc">$</span>fungus_tree, <span class="at">dimLabels=</span><span class="fu">list</span>(<span class="at">row =</span> <span class="st">'fungis'</span>,<span class="at">col =</span> <span class="st">'tree'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1241,8 +1232,8 @@ window.Quarto = {
 </div>
 </section>
 </section>
-<section id="the-shiny-application" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 3. The Shiny application</h1>
+<section id="the-shiny-application" class="level1 unnumbered">
+<h1 class="unnumbered">3. The Shiny application</h1>
 <p>We (T. Vanrenterghem (INRAE)) are developing a Shiny application to help people use our package.</p>
 <ul>
 <li>You can either use it online <a href="https://shiny.migale.inrae.fr/app/ShinySBM">here</a>.</li>
@@ -1260,8 +1251,8 @@ window.Quarto = {
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"foodwebs"</span>)</span>
 <span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(foodwebs[[<span class="dv">1</span>]],<span class="at">file=</span><span class="st">"myNetwork.csv"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="references" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="references"><span class="header-section-number">5.1</span> References</h2>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
@@ -1693,7 +1684,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="../chapters/TutorialDattilo.html" class="pagination-link" aria-label="(day 4) multilevel">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">(day 4) multilevel</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">(day 4) multilevel</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

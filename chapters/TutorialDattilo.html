@@ -6,11 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Econet group">
-<meta name="dcterms.date" content="2024-04-24">
 <meta name="description" content="FRB-CESAB &amp; ANR ECONET course     ">
 
-<title>Analyzing Ecological Networks - 2&nbsp; Tutorial on Multipartite block models</title>
+<title>Analyzing Ecological Networks - Tutorial on Multipartite block models</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -124,7 +122,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_0_igraph.html">EXERCISES</a></li><li class="breadcrumb-item"><a href="../chapters/TutorialDattilo.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">(day 4) multilevel</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_0_igraph.html">EXERCISES</a></li><li class="breadcrumb-item"><a href="../chapters/TutorialDattilo.html">(day 4) multilevel</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -211,6 +209,12 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/day2_complex-stab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 1) Why ecological networks?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/day3_sbm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(day 3) SBM</span></a>
   </div>
@@ -259,13 +263,13 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/TutorialBM.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">(day 3) SBM</span></span></a>
+ <span class="menu-text">(day 3) SBM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/TutorialDattilo.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">(day 4) multilevel</span></span></a>
+ <span class="menu-text">(day 4) multilevel</span></a>
   </div>
 </li>
       </ul>
@@ -280,10 +284,10 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements"><span class="header-section-number">3</span> 0.Requirements</a></li>
-  <li><a href="#what-if-i-have-more-than-2-types-of-nodes" id="toc-what-if-i-have-more-than-2-types-of-nodes" class="nav-link" data-scroll-target="#what-if-i-have-more-than-2-types-of-nodes"><span class="header-section-number">4</span> 1. What if I have more than 2 types of nodes?</a>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements">0.Requirements</a></li>
+  <li><a href="#what-if-i-have-more-than-2-types-of-nodes" id="toc-what-if-i-have-more-than-2-types-of-nodes" class="nav-link" data-scroll-target="#what-if-i-have-more-than-2-types-of-nodes">1. What if I have more than 2 types of nodes?</a>
   <ul class="collapse">
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4.1</span> References</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -291,29 +295,16 @@ div.csl-indent {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_0_igraph.html">EXERCISES</a></li><li class="breadcrumb-item"><a href="../chapters/TutorialDattilo.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">(day 4) multilevel</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_0_igraph.html">EXERCISES</a></li><li class="breadcrumb-item"><a href="../chapters/TutorialDattilo.html">(day 4) multilevel</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tutorial on Multipartite block models</span></h1>
-<p class="subtitle lead">April 2024</p>
+<h1 class="title">Tutorial on Multipartite block models</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Econet group </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 24, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -323,8 +314,8 @@ div.csl-indent {
 </header>
 
 
-<section id="requirements" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 0.Requirements</h1>
+<section id="requirements" class="level1 unnumbered">
+<h1 class="unnumbered">0.Requirements</h1>
 <p>This tutorial illustrates the use of block models for the analysis of (ecological) multipartite network. Is is mainly based on a <a href="https://grosssbm.github.io/sbm/articles/Multipartite_EcologicalNetwork.html">vignette</a> of the package <code>sbm</code> . The package is on the CRAN. Its development version is on <a href="https://github.com/GrossSBM/sbm">Github</a>. It as been installed earlier during the week.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"sbm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -334,8 +325,8 @@ div.csl-indent {
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="what-if-i-have-more-than-2-types-of-nodes" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 1. What if I have more than 2 types of nodes?</h1>
+<section id="what-if-i-have-more-than-2-types-of-nodes" class="level1 unnumbered">
+<h1 class="unnumbered">1. What if I have more than 2 types of nodes?</h1>
 <p>The sbm package is able to handle multipartite networks, meaning that they involve more that two types of nodes and intra and inter groups connections. We analyse the data from <span class="citation" data-cites="Dattilo">Dáttilo et al. (<a href="#ref-Dattilo" role="doc-biblioref">2016</a>)</span> with the method proposed by <span class="citation" data-cites="multipartite">Bar-Hen, Barbillon, and Donnet (<a href="#ref-multipartite" role="doc-biblioref">2022</a>)</span>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(multipartiteEcologicalNetwork)</span>
@@ -393,8 +384,8 @@ div.csl-indent {
 </div>
 </div>
 <p>These options are not included in the Shiny application yet.</p>
-<section id="references" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="references"><span class="header-section-number">4.1</span> References</h2>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
@@ -821,7 +812,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/TutorialBM.html" class="pagination-link" aria-label="(day 3) SBM">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">(day 3) SBM</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">(day 3) SBM</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
