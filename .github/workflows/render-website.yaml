@@ -28,22 +28,9 @@ jobs:
           packages:
             any::knitr
             any::rmarkdown
-            any::igraph
-            any::igraphdata
-            any::bipartite
-            # any::FWebs
-            any::vegan
-            any::cheddar
-            any::matlib
-            any::sbm
-            any::alluvial
-            any::econetwork
-            any::poweRlaw
-            # any::rmangal
-            # any::colSBM
-            any::network
-            any::GGally
-            any::RColorBrewe
+      
+      - name: Run program
+        run: Rscript -e 'install.packages(c("igraph", "igraphdata", "bipartite", "vegan", "cheddar", "matlib", "sbm", "alluvial", "econetwork", "poweRlaw", "network", "GGally", "RColorBrewer"))'
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
