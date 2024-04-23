@@ -2,14 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Econet group">
 <meta name="dcterms.date" content="2024-04-24">
+<meta name="description" content="FRB-CESAB &amp; ANR ECONET course     ">
 
-<title>Tutorial on Stochastic Block Models</title>
+<title>Analyzing Ecological Networks - 1&nbsp; Tutorial on Stochastic Block Models</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -60,6 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -78,31 +80,266 @@ div.csl-indent {
 }</style>
 
 
-<script src="TutorialBM_files/libs/clipboard/clipboard.min.js"></script>
-<script src="TutorialBM_files/libs/quarto-html/quarto.js"></script>
-<script src="TutorialBM_files/libs/quarto-html/popper.min.js"></script>
-<script src="TutorialBM_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="TutorialBM_files/libs/quarto-html/anchor.min.js"></script>
-<link href="TutorialBM_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="TutorialBM_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="TutorialBM_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="TutorialBM_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="TutorialBM_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../chapters/TutorialDattilo.html" rel="next">
+<link href="../chapters/day2.html" rel="prev">
+<link href="../images/logo-networks_150dpi.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 </head>
 
-<body class="fullcontent">
+<body class="nav-sidebar floating">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_0_igraph.html">EXERCISES</a></li><li class="breadcrumb-item"><a href="../chapters/TutorialBM.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">(day 3) SBM</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Analyzing Ecological Networks</a> 
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">PREREQUISITES</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/setting-up-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setting up R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/install-packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R packages to install</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">COURSES</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day1_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 1) Introduction to networks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day1_what-eco-net.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 1) What networks in ecology?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day1_what-eco-net2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 1) What data?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day1_why-net.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 1) Why ecological networks?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day2_metrics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 2) Network metrics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day3_sbm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 3) SBM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day4_multilevel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 4) Multilevel</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day5_collection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 5) Collection of networks</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">EXERCISES</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day1_0_igraph.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 1) igraph exercise</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day1_1_Graph_Exploration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 1) graph exploration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/day2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">(day 2) network structure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/TutorialBM.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">(day 3) SBM</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/TutorialDattilo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">(day 4) multilevel</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements"><span class="header-section-number">2</span> 0.Requirements</a></li>
+  <li><a href="#simulating-network-data" id="toc-simulating-network-data" class="nav-link" data-scroll-target="#simulating-network-data"><span class="header-section-number">3</span> 1. Simulating network data</a>
+  <ul class="collapse">
+  <li><a href="#a.-community-network" id="toc-a.-community-network" class="nav-link" data-scroll-target="#a.-community-network"><span class="header-section-number">3.1</span> 1.A. Community network</a></li>
+  <li><a href="#b.-bipartite-networks" id="toc-b.-bipartite-networks" class="nav-link" data-scroll-target="#b.-bipartite-networks"><span class="header-section-number">3.2</span> 1.B. Bipartite networks</a></li>
+  </ul></li>
+  <li><a href="#analyzing-an-ecological-data-set" id="toc-analyzing-an-ecological-data-set" class="nav-link" data-scroll-target="#analyzing-an-ecological-data-set"><span class="header-section-number">4</span> 2. Analyzing an ecological data set</a>
+  <ul class="collapse">
+  <li><a href="#a.-the-data-set-antagonistic-treefungus-interaction-network" id="toc-a.-the-data-set-antagonistic-treefungus-interaction-network" class="nav-link" data-scroll-target="#a.-the-data-set-antagonistic-treefungus-interaction-network"><span class="header-section-number">4.1</span> 2.A. The data set: antagonistic tree/fungus interaction network</a></li>
+  <li><a href="#b.-analysis-of-the-treetree-data" id="toc-b.-analysis-of-the-treetree-data" class="nav-link" data-scroll-target="#b.-analysis-of-the-treetree-data"><span class="header-section-number">4.2</span> 2.B. Analysis of the tree/tree data</a>
+  <ul class="collapse">
+  <li><a href="#b.1-tree-tree-binary-interaction-networks" id="toc-b.1-tree-tree-binary-interaction-networks" class="nav-link" data-scroll-target="#b.1-tree-tree-binary-interaction-networks"><span class="header-section-number">4.2.1</span> 2.B.1 Tree-tree binary interaction networks</a></li>
+  <li><a href="#b.3-analysis-of-the-weighted-interaction-network" id="toc-b.3-analysis-of-the-weighted-interaction-network" class="nav-link" data-scroll-target="#b.3-analysis-of-the-weighted-interaction-network"><span class="header-section-number">4.2.2</span> 2.B.3 Analysis of the weighted interaction network</a></li>
+  <li><a href="#b.4-introduction-of-covariates" id="toc-b.4-introduction-of-covariates" class="nav-link" data-scroll-target="#b.4-introduction-of-covariates"><span class="header-section-number">4.2.3</span> 2.B.4 Introduction of covariates</a></li>
+  </ul></li>
+  <li><a href="#c-analysis-of-the-treefungi-data" id="toc-c-analysis-of-the-treefungi-data" class="nav-link" data-scroll-target="#c-analysis-of-the-treefungi-data"><span class="header-section-number">4.3</span> 2.C Analysis of the tree/fungi data</a></li>
+  </ul></li>
+  <li><a href="#the-shiny-application" id="toc-the-shiny-application" class="nav-link" data-scroll-target="#the-shiny-application"><span class="header-section-number">5</span> 3. The Shiny application</a>
+  <ul class="collapse">
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">5.1</span> References</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/day1_0_igraph.html">EXERCISES</a></li><li class="breadcrumb-item"><a href="../chapters/TutorialBM.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">(day 3) SBM</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Tutorial on Stochastic Block Models</h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Tutorial on Stochastic Block Models</span></h1>
 <p class="subtitle lead">April 2024</p>
 </div>
 
@@ -128,10 +365,12 @@ div.csl-indent {
   </div>
   
 
+
 </header>
 
-<section id="requirements" class="level1">
-<h1>0.Requirements</h1>
+
+<section id="requirements" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 0.Requirements</h1>
 <p>This tutorial illustrates the use of block models for the analysis of (ecological) network. Is is mainly based on the vignette of the package <code>sbm</code>. The package is on the CRAN. Its development version is on <a href="https://github.com/GrossSBM/sbm">Github</a>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"sbm"</span>)</span>
@@ -150,11 +389,11 @@ div.csl-indent {
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="simulating-network-data" class="level1">
-<h1>1. Simulating network data</h1>
+<section id="simulating-network-data" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 1. Simulating network data</h1>
 <p>Let us first simulate networks using the <code>sbm</code> package.</p>
-<section id="a.-community-network" class="level2">
-<h2 class="anchored" data-anchor-id="a.-community-network">1.A. Community network</h2>
+<section id="a.-community-network" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="a.-community-network"><span class="header-section-number">3.1</span> 1.A. Community network</h2>
 <p>First define the parameters.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>K <span class="ot">=</span> <span class="dv">3</span>;  <span class="co"># nb of blocks</span></span>
@@ -182,13 +421,21 @@ div.csl-indent {
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>colSet <span class="ot">&lt;-</span> RColorBrewer<span class="sc">::</span><span class="fu">brewer.pal</span>(<span class="at">n =</span> <span class="dv">8</span>, <span class="at">name =</span> <span class="st">"Set2"</span>) </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>GGally<span class="sc">::</span><span class="fu">ggnet2</span>(mySampler<span class="sc">$</span>networkData,<span class="at">label =</span> <span class="cn">TRUE</span>,<span class="at">color=</span>colSet[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/communities%20plot-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/communities plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>plotOptions <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">colNames =</span> <span class="cn">TRUE</span>, <span class="at">rowNames =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>sbm<span class="sc">::</span><span class="fu">plotMyMatrix</span>(mySampler<span class="sc">$</span>networkData,<span class="at">dimLabels =</span> <span class="fu">list</span>(<span class="at">row =</span> <span class="st">"species"</span>, <span class="at">col =</span> <span class="st">"species"</span>),<span class="at">plotOptions =</span> plotOptions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/communities%20plot-2.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/communities plot-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>A few modification as to be done if we want to highlight the blocs.</p>
@@ -204,7 +451,11 @@ div.csl-indent {
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggnet2</span>(net,<span class="at">node.color =</span>  Z, <span class="at">palette =</span> <span class="st">"Set2"</span>,<span class="at">label =</span> <span class="cn">TRUE</span>,<span class="at">arrow.size =</span> <span class="dv">6</span>, <span class="at">arrow.gap =</span> <span class="fl">0.017</span>,<span class="at">label.size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/plot%20commu%20with%20colors-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/plot commu with colors-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>sbm<span class="sc">::</span><span class="fu">plotMyMatrix</span>(myMat,<span class="at">dimLabels =</span> <span class="fu">list</span>(<span class="at">row =</span> <span class="st">"species"</span>, <span class="at">col =</span> <span class="st">"species"</span>),<span class="at">plotOptions =</span> plotOptions)<span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">color=</span>my_color_nodes_col),<span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">color=</span>my_color_nodes))</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: Vectorized input to `element_text()` is not officially supported.</span></span>
@@ -212,13 +463,17 @@ div.csl-indent {
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Vectorized input to `element_text()` is not officially supported.</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ℹ Results may be unexpected or may change in future versions of ggplot2.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/plot%20commu%20with%20colors-2.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/plot commu with colors-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p><strong>Exercice</strong> Modify the structure by choosing other parameters and compute the statistics that you learned the previous days. Use <code>igraph</code> to plot your new networks. For instance, you may try to simulate a foodweb with 5 trophic levels.</p>
 </section>
-<section id="b.-bipartite-networks" class="level2">
-<h2 class="anchored" data-anchor-id="b.-bipartite-networks">1.B. Bipartite networks</h2>
+<section id="b.-bipartite-networks" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="b.-bipartite-networks"><span class="header-section-number">3.2</span> 1.B. Bipartite networks</h2>
 <p><strong>Exercice</strong> Use the function <code>sampleBipartiteSBM</code> to simulate a weighted (counts) bipartite network with the following parameters.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>K <span class="ot">=</span> <span class="dv">3</span>;  <span class="co"># nb of blocks</span></span>
@@ -231,10 +486,10 @@ div.csl-indent {
 </div>
 </section>
 </section>
-<section id="analyzing-an-ecological-data-set" class="level1">
-<h1>2. Analyzing an ecological data set</h1>
-<section id="a.-the-data-set-antagonistic-treefungus-interaction-network" class="level2">
-<h2 class="anchored" data-anchor-id="a.-the-data-set-antagonistic-treefungus-interaction-network">2.A. The data set: antagonistic tree/fungus interaction network</h2>
+<section id="analyzing-an-ecological-data-set" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 2. Analyzing an ecological data set</h1>
+<section id="a.-the-data-set-antagonistic-treefungus-interaction-network" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="a.-the-data-set-antagonistic-treefungus-interaction-network"><span class="header-section-number">4.1</span> 2.A. The data set: antagonistic tree/fungus interaction network</h2>
 <p>We consider the fungus-tree interaction network studied by <span class="citation" data-cites="tree_fungus_network">Vacher, Piou, and Desprez-Loustau (<a href="#ref-tree_fungus_network" role="doc-biblioref">2008</a>)</span>, available with the package <code>sbm</code> :</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"fungusTreeNetwork"</span>)</span>
@@ -256,10 +511,10 @@ div.csl-indent {
 </ul>
 <p>We first consider the tree-tree interactions resulting into a Simple Network. Then we consider the bipartite network between trees and fungi.</p>
 </section>
-<section id="b.-analysis-of-the-treetree-data" class="level2">
-<h2 class="anchored" data-anchor-id="b.-analysis-of-the-treetree-data">2.B. Analysis of the tree/tree data</h2>
-<section id="b.1-tree-tree-binary-interaction-networks" class="level3">
-<h3 class="anchored" data-anchor-id="b.1-tree-tree-binary-interaction-networks">2.B.1 Tree-tree binary interaction networks</h3>
+<section id="b.-analysis-of-the-treetree-data" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="b.-analysis-of-the-treetree-data"><span class="header-section-number">4.2</span> 2.B. Analysis of the tree/tree data</h2>
+<section id="b.1-tree-tree-binary-interaction-networks" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="b.1-tree-tree-binary-interaction-networks"><span class="header-section-number">4.2.1</span> 2.B.1 Tree-tree binary interaction networks</h3>
 <p>We first consider the binary network where an edge is drawn between two trees when they do share a least one common fungi:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>tree_tree_binary <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">*</span> (fungusTreeNetwork<span class="sc">$</span>tree_tree <span class="sc">!=</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -268,7 +523,11 @@ div.csl-indent {
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotMyMatrix</span>(tree_tree_binary, <span class="at">dimLabels =</span> <span class="fu">list</span>(<span class="at">row =</span> <span class="st">'tree'</span>, <span class="at">col =</span> <span class="st">'tree'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/tree_tree_binary%20network%20plot%20data-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/tree_tree_binary network plot data-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>We look for some latent structure of the network by adjusting a simple SBM with the function <code>estimateSimpleSBM</code>. We assume the our matrix is the realisation of the SBM: <span class="math display">\[\begin{align*}
@@ -318,7 +577,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="ICL_tree_bin.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">ICL for the Binary SBM</figcaption>
+<figcaption>ICL for the Binary SBM</figcaption>
 </figure>
 </div>
 <p>Once fitted, the user can manipulate the fitted model by accessing the various fields and methods enjoyed by the class <code>simpleSBMfit</code>. Most important fields and methods are recalled to the user via the <code>show</code> method:</p>
@@ -340,14 +599,22 @@ div.csl-indent {
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mySimpleSBM, <span class="at">type =</span> <span class="st">"data"</span>, <span class="at">dimLabels =</span> <span class="fu">list</span>(<span class="at">row =</span> <span class="st">'tree'</span>, <span class="at">col =</span> <span class="st">'tree'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/simpleSBMfit%20plot1-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/simpleSBMfit plot1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>One can also plot the expected network which, in case of the Bernoulli model, corresponds to the probability of connection between any pair of nodes in the network.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mySimpleSBM, <span class="at">type =</span> <span class="st">"expected"</span>,<span class="at">estimOptions=</span><span class="fu">list</span>(<span class="at">legend=</span><span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/simpleSBMfit%20plot2-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/simpleSBMfit plot2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p><strong>About model selection and choice of the number of blocks</strong></p>
@@ -432,7 +699,11 @@ div.csl-indent {
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> nbBlocks, <span class="at">y =</span> ICL) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/simpleSBM%20ICL-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/simpleSBM ICL-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>The 4-block model could have been a good choice too, in place of the 5-block model. The user can update the current <code>simpleSBMfit</code> thanks to the the <code>setModel</code> method:</p>
@@ -442,7 +713,11 @@ div.csl-indent {
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 4</span></span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>mySimpleSBM<span class="sc">$</span><span class="fu">plot</span>(<span class="at">type =</span> <span class="st">'expected'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/simpleSBMfit%20changeModel-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/simpleSBMfit changeModel-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Going back to the best model</p>
@@ -450,15 +725,19 @@ div.csl-indent {
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>mySimpleSBM<span class="sc">$</span><span class="fu">setModel</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="b.3-analysis-of-the-weighted-interaction-network" class="level3">
-<h3 class="anchored" data-anchor-id="b.3-analysis-of-the-weighted-interaction-network">2.B.3 Analysis of the weighted interaction network</h3>
+<section id="b.3-analysis-of-the-weighted-interaction-network" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="b.3-analysis-of-the-weighted-interaction-network"><span class="header-section-number">4.2.2</span> 2.B.3 Analysis of the weighted interaction network</h3>
 <p>Instead of considering the binary network tree-tree we may consider the weighted network where the link between two trees is the number of fungi they share.</p>
 <p>We plot the matrix with function <code>plotMyMatrix</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>tree_tree <span class="ot">&lt;-</span> fungusTreeNetwork<span class="sc">$</span>tree_tree</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotMyMatrix</span>(tree_tree, <span class="at">dimLabels =</span> <span class="fu">list</span>(<span class="at">row =</span> <span class="st">'tree'</span>, <span class="at">col =</span> <span class="st">'tree'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/tree_tree%20network%20plot%20data-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/tree_tree network plot data-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Here again, we look for some latent structure of the network by adjusting a simple SBM with the function <code>estimateSimpleSBM</code>, considering a Poisson distribution on the edges.</p>
@@ -531,7 +810,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="ICL_tree_poisson.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">ICL for the Poisson SBM</figcaption>
+<figcaption>ICL for the Poisson SBM</figcaption>
 </figure>
 </div>
 <p>Once fitted, the user can manipulate the fitted model by accessing the various fields and methods enjoyed by the class <code>simpleSBMfit</code>. Most important fields and methods are recalled to the user via the <code>show</code> method:</p>
@@ -568,14 +847,22 @@ div.csl-indent {
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mySimpleSBMPoisson, <span class="at">type =</span> <span class="st">"data"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/simpleSBMfitPoisson%20plot1-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/simpleSBMfitPoisson plot1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>One can also plot the expected network which, in case of the Poisson model, corresponds to the expectation of connection between any pair of nodes in the network.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mySimpleSBMPoisson, <span class="at">type =</span> <span class="st">"expected"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/simpleSBMfitPoisson%20plot2-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/simpleSBMfitPoisson plot2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>The composition of the clusters/blocks are given by :</p>
@@ -652,12 +939,16 @@ div.csl-indent {
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>listMemberships<span class="sc">$</span>weightSBM <span class="ot">&lt;-</span> mySimpleSBMPoisson<span class="sc">$</span>memberships</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>P <span class="ot">&lt;-</span> <span class="fu">plotAlluvial</span>(listMemberships)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/alluvial-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/alluvial-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
-<section id="b.4-introduction-of-covariates" class="level3">
-<h3 class="anchored" data-anchor-id="b.4-introduction-of-covariates">2.B.4 Introduction of covariates</h3>
+<section id="b.4-introduction-of-covariates" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="b.4-introduction-of-covariates"><span class="header-section-number">4.2.3</span> 2.B.4 Introduction of covariates</h3>
 <p>We have on each pair of trees 3 covariates, namely the genetic distance, the taxonomic distance and the geographic distance. Each covariate has to be introduced as a matrix: <span class="math inline">\(X^k_{ij}\)</span> corresponds to the value of the <span class="math inline">\(k\)</span>-th covariate describing the couple <span class="math inline">\((i,j)\)</span>.</p>
 <p>We can also use the <code>sbm</code> package to estimate the parameters of the SBM with covariates.</p>
 <span class="math display">\[\begin{align*}
@@ -676,7 +967,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="ICL_tree_cov.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">ICL for the Poisson SBM with covariates</figcaption>
+<figcaption>ICL for the Poisson SBM with covariates</figcaption>
 </figure>
 </div>
 <ul>
@@ -693,15 +984,15 @@ div.csl-indent {
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>mySimpleSBMCov<span class="sc">$</span>connnectParam</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; NULL</span></span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>mySimpleSBMCov<span class="sc">$</span>blockProp</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.3715916 0.2159544 0.2354117 0.1770423</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.3715916 0.2159544 0.2354120 0.1770421</span></span>
 <span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>mySimpleSBMCov<span class="sc">$</span>memberships</span>
 <span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] 1 1 2 1 2 2 4 4 2 1 3 1 1 1 1 2 1 2 3 3 2 1 2 1 3 3 2 1 3 2 3 1 4 1 1 3 1 3</span></span>
 <span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [39] 4 1 1 3 2 4 4 1 4 4 3 3 4</span></span>
 <span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>mySimpleSBMCov<span class="sc">$</span>covarParam</span>
 <span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;            [,1]</span></span>
-<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,]  0.1981260</span></span>
-<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,] -2.0544826</span></span>
-<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,] -0.3568413</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,]  0.1977418</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,] -2.0548142</span></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,] -0.3579126</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>The composition of the clusters/blocks are given by:<br>
@@ -779,7 +1070,11 @@ div.csl-indent {
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>listMemberships<span class="sc">$</span>weightedCov <span class="ot">&lt;-</span> mySimpleSBMCov<span class="sc">$</span>memberships</span>
 <span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plotAlluvial</span>(listMemberships)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/alluvial%20cov-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/alluvial cov-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 <pre><code>#&gt; $plotOptions
 #&gt; $plotOptions$curvy
@@ -815,13 +1110,17 @@ div.csl-indent {
 </div>
 </section>
 </section>
-<section id="c-analysis-of-the-treefungi-data" class="level2">
-<h2 class="anchored" data-anchor-id="c-analysis-of-the-treefungi-data">2.C Analysis of the tree/fungi data</h2>
+<section id="c-analysis-of-the-treefungi-data" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="c-analysis-of-the-treefungi-data"><span class="header-section-number">4.3</span> 2.C Analysis of the tree/fungi data</h2>
 <p>We now analyze the bipartite tree/fungi interactions. The incidence matrix can be plotted with the function </p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotMyMatrix</span>(fungusTreeNetwork<span class="sc">$</span>fungus_tree, <span class="at">dimLabels=</span><span class="fu">list</span>(<span class="at">row =</span> <span class="st">'fungis'</span>,<span class="at">col =</span> <span class="st">'tree'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/plot%20incidence-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/plot incidence-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>We set the following model:</p>
@@ -923,19 +1222,27 @@ div.csl-indent {
 <div class="cell">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(myBipartiteSBM, <span class="at">type =</span> <span class="st">"data"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/plot%20bipartite%20estim-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/plot bipartite estim-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(myBipartiteSBM, <span class="at">type =</span> <span class="st">"expected"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="TutorialBM_files/figure-html/plot%20bipartite%20expect-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="TutorialBM_files/figure-html/plot bipartite expect-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 </section>
-<section id="the-shiny-application" class="level1">
-<h1>3. The Shiny application</h1>
+<section id="the-shiny-application" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 3. The Shiny application</h1>
 <p>We (T. Vanrenterghem (INRAE)) are developing a Shiny application to help people use our package.</p>
 <ul>
 <li>You can either use it online <a href="https://shiny.migale.inrae.fr/app/ShinySBM">here</a>.</li>
@@ -953,21 +1260,22 @@ div.csl-indent {
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"foodwebs"</span>)</span>
 <span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(foodwebs[[<span class="dv">1</span>]],<span class="at">file=</span><span class="st">"myNetwork.csv"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="references" class="level2 unnumbered">
+<section id="references" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="references"><span class="header-section-number">5.1</span> References</h2>
 
 
-</section>
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-thompson2003impacts" class="csl-entry" role="listitem">
 Thompson, R. M., and C. R. Townsend. 2003. <span>“IMPACTS ON STREAM FOOD WEBS OF NATIVE AND EXOTIC FOREST: AN INTERCONTINENTAL COMPARISON.”</span> <em>Ecology</em> 84 (1): 145–61. https://doi.org/<a href="https://doi.org/10.1890/0012-9658(2003)084[0145:IOSFWO]2.0.CO;2">https://doi.org/10.1890/0012-9658(2003)084[0145:IOSFWO]2.0.CO;2</a>.
 </div>
 <div id="ref-tree_fungus_network" class="csl-entry" role="listitem">
 Vacher, Corinne, Dominique Piou, and Marie-Laure Desprez-Loustau. 2008. <span>“Architecture of an Antagonistic Tree/Fungus Network: The Asymmetric Influence of Past Evolutionary History.”</span> <em>PloS One</em> 3 (3): e1740.
 </div>
-</div></section></div></main>
-<!-- /main column -->
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1047,10 +1355,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1060,8 +1385,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1073,7 +1407,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1117,6 +1574,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1142,6 +1600,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1201,7 +1685,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/day2.html" class="pagination-link" aria-label="(day 2) network structure">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">(day 2) network structure</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/TutorialDattilo.html" class="pagination-link" aria-label="(day 4) multilevel">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">(day 4) multilevel</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© CC-By <a href="https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/">FRB-CESAB</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p>Code source available on <a href="https://github.com/econetoolbox/econetoolbox.github.io/"><i class="fa-brands fa-github" aria-label="github"></i></a></p>
+</div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
 
 
 
