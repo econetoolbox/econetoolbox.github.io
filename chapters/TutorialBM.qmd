@@ -1,5 +1,5 @@
 ---
-title: "Day 3 Stochastic Block Models"
+title: "Tutorial on Stochastic Block Models"
 subtitle: "April 2024"
 author: "Econet group"
 date: "04/24/2024"
