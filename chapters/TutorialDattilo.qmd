@@ -1,8 +1,4 @@
 ---
-title: "Tutorial on Multipartite block models"
-subtitle: "April 2024"
-author: "Econet group"
-date: "04/24/2024"
 output:
   rmarkdown::html_vignette:
   toc: true
@@ -21,10 +17,9 @@ comment = "#>"
 )
 ```
 
+# Tutorial on Multipartite block models {.unnumbered}
 
-
-
-# 0.Requirements
+# 0.Requirements {.unnumbered}
 
 This tutorial illustrates the use of block models for the analysis of (ecological) multipartite network.
 Is is mainly based on a [vignette](https://grosssbm.github.io/sbm/articles/Multipartite_EcologicalNetwork.html) of the package `sbm` .
@@ -42,7 +37,7 @@ library(sbm)
 library(ggplot2)
 ```
 
-# 1. What if I have more than 2 types of nodes? 
+# 1. What if I have more than 2 types of nodes? {.unnumbered}
 
 The sbm package is able to handle multipartite networks, meaning that they involve more that two types of nodes and intra and inter groups connections. 
 We analyse the data from @Dattilo with the method proposed by  @multipartite. 

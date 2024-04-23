@@ -1,8 +1,4 @@
 ---
-title: "Tutorial on Stochastic Block Models"
-subtitle: "April 2024"
-author: "Econet group"
-date: "04/24/2024"
 output:
   rmarkdown::html_vignette:
   toc: true
@@ -25,8 +21,10 @@ comment = "#>"
 
 ```
 
+ 
+# Tutorial on Stochastic Block Models {.unnumbered}
 
-# 0.Requirements
+# 0.Requirements  {.unnumbered}
 
 This tutorial illustrates the use of block models for the analysis of (ecological) network.
 Is is mainly based on the vignette of the package `sbm`.
@@ -56,7 +54,7 @@ library(RColorBrewer)
 library(knitr)
 ```
 
-# 1. Simulating network data
+# 1. Simulating network data  {.unnumbered}
 
 Let us first simulate networks using the `sbm` package.
 
@@ -107,7 +105,7 @@ sbm::plotMyMatrix(myMat,dimLabels = list(row = "species", col = "species"),plotO
 
 **Exercice** Modify the structure by choosing other parameters and compute the statistics that you learned the previous days. Use `igraph` to plot your new networks. For instance, you may try to simulate a foodweb with 5 trophic levels.
 
-## 1.B. Bipartite networks
+## 1.B. Bipartite networks  {.unnumbered}
 
 **Exercice** Use the function `sampleBipartiteSBM` to simulate a weighted (counts) bipartite network with the following parameters.
 
@@ -129,7 +127,7 @@ mySampler
 
 
 
-# 2. Analyzing an ecological data set
+# 2. Analyzing an ecological data set  {.unnumbered}
 
 ## 2.A. The data set: antagonistic tree/fungus interaction network
 
@@ -431,7 +429,7 @@ plot(myBipartiteSBM, type = "expected")
 
 
 
-# 3.  The Shiny application
+# 3.  The Shiny application  {.unnumbered}
 
 We (T. Vanrenterghem (INRAE))  are developing a Shiny application to help people use our package. 
 
