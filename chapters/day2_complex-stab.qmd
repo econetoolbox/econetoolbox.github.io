@@ -1,0 +1,16 @@
+
+::: {.callout-note icon=true appearance="simple"}
+## (day 1) Why ecological networks? {.unnumbered}
+
+<br />
+{{< fa user >}} &nbsp;**Author:** [Sonia Kéfi](https://isem-evolution.fr/en/membre/kefi/)<br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://econettoolbox.github.io/chapters/cours/day2_cours2_complexStab.pdf>
+:::
+
+
+<br />
+
+<div class="container">
+  <iframe class="responsive-iframe" src="cours/day2_cours2_complexStab.pdf"></iframe>
+</div> 
+
