@@ -28,6 +28,22 @@ jobs:
           packages:
             any::knitr
             any::rmarkdown
+            any::igraph
+            any::igraphdata
+            any::bipartite
+            # any::FWebs
+            any::vegan
+            any::cheddar
+            any::matlib
+            any::sbm
+            any::alluvial
+            any::econetwork
+            any::poweRlaw
+            # any::rmangal
+            # any::colSBM
+            any::network
+            any::GGally
+            any::RColorBrewe
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

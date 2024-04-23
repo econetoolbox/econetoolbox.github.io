@@ -1,5 +1,5 @@
 ---
-title: "Day 4 Multipartite block models"
+title: "Tutorial on Multipartite block models"
 subtitle: "April 2024"
 author: "Econet group"
 date: "04/24/2024"

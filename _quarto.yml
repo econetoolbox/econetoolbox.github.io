@@ -68,10 +68,10 @@ book:
         - text: (day 2) network structure
           href: chapters/day2.html
         - text: (day 3) SBM
-          href: chapters/day3_files/TutorialBM.html
+          href: chapters/TutorialBM.qmd
 #        - chapters/TutorialBM.qmd
         - text: (day 4) multilevel
-          href: chapters/day4_files/TutorialDattilo.html
+          href: chapters/TutorialDattilo.qmd
 #        - chapters/TutorialDattilo.qmd
 
 
