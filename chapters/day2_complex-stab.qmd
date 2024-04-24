@@ -4,7 +4,7 @@
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Sonia Kéfi](https://isem-evolution.fr/en/membre/kefi/)<br/>
-{{< fa globe >}} &nbsp;**Slides:** <https://econettoolbox.github.io/chapters/cours/day2_cours2_complexStab.pdf>
+{{< fa globe >}} &nbsp;**Slides:** <https://econetoolbox.github.io/chapters/cours/day2_cours2_complexStab.pdf>
 :::
 
 
