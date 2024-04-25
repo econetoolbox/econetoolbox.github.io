@@ -150,7 +150,7 @@
     "href": "chapters/day2_metrics.html",
     "title": "[d2] Net. metrics",
     "section": "",
-    "text": "Author: François Massol   Source: https://github.com/econetoolbox/data/tree/main/day2_files/   Slides: https://econetoolbox.github.io/chapters/cours/day2_cours_metrics.pdf",
+    "text": "Author: François Massol   Source: https://github.com/econetoolbox/data/tree/main/day2_files/   Slides: https://econetoolbox.github.io/chapters/cours/day2_cours1_metrics.pdf",
     "crumbs": [
       "COURSES",
       "[d2] Net. metrics"
@@ -190,14 +190,25 @@
     ]
   },
   {
-    "objectID": "chapters/day4_multilevel.html",
-    "href": "chapters/day4_multilevel.html",
-    "title": "[d4] Multilevel",
+    "objectID": "chapters/day4_multilayer.html",
+    "href": "chapters/day4_multilayer.html",
+    "title": "[d4] Multilayer ecological net.",
     "section": "",
-    "text": "Author: Sophie Donnet   Source: https://github.com/econetoolbox/data/tree/main/day4_files/   Slides: https://econetoolbox.github.io/chapters/cours/day4_cours_multilevels.pdf",
+    "text": "Author: Sonia Kéfi   Slides: https://econetoolbox.github.io/chapters/cours/day4_cours1_multilayer.pdf",
     "crumbs": [
       "COURSES",
-      "[d4] Multilevel"
+      "[d4] Multilayer ecological net."
+    ]
+  },
+  {
+    "objectID": "chapters/day4_multilevel.html",
+    "href": "chapters/day4_multilevel.html",
+    "title": "[d4] Multilevel net.",
+    "section": "",
+    "text": "Author: Sophie Donnet   Source: https://github.com/econetoolbox/data/tree/main/day4_files/   Slides: https://econetoolbox.github.io/chapters/cours/day4_cours2_multilevels.pdf",
+    "crumbs": [
+      "COURSES",
+      "[d4] Multilevel net."
     ]
   },
   {
