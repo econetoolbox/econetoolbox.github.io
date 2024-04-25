@@ -4,7 +4,7 @@
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Sophie Donnet](https://sophiedonnet.github.io/)<br/>
-{{< fa globe >}} &nbsp;**Slides:** <https://econettoolbox.github.io/chapters/cours/day5_cours_collection.pdf>
+{{< fa globe >}} &nbsp;**Slides:** <https://econetoolbox.github.io/chapters/cours/day5_cours_collection.pdf>
 :::
 
 

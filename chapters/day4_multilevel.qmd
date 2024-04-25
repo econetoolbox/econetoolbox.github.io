@@ -5,7 +5,7 @@
 <br />
 {{< fa user >}} &nbsp;**Author:** [Sophie Donnet](https://sophiedonnet.github.io/)<br/>
 {{< fa brands github >}} &nbsp;**Source:** <https://github.com/econetoolbox/data/tree/main/day4_files/><br/>
-{{< fa globe >}} &nbsp;**Slides:** <https://econettoolbox.github.io/chapters/cours/day4_cours_multilevels.pdf>
+{{< fa globe >}} &nbsp;**Slides:** <https://econetoolbox.github.io/chapters/cours/day4_cours_multilevels.pdf>
 :::
 
 

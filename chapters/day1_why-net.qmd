@@ -4,7 +4,7 @@
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Elisa Thébault](https://iees-paris.fr/annuaire/thebault-elisa/)<br/>
-{{< fa globe >}} &nbsp;**Slides:** <https://econettoolbox.github.io/chapters/cours/day1_cours4_WhyNetworks.pdf>
+{{< fa globe >}} &nbsp;**Slides:** <https://econetoolbox.github.io/chapters/cours/day1_cours4_WhyNetworks.pdf>
 :::
 
 

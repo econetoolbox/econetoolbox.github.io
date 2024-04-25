@@ -5,7 +5,7 @@
 <br />
 {{< fa user >}} &nbsp;**Author:** [François Massol](https://sites.google.com/a/polytechnique.org/francoismassol/home?pli=1)<br/>
 {{< fa brands github >}} &nbsp;**Source:** <https://github.com/econetoolbox/data/tree/main/day2_files/><br/>
-{{< fa globe >}} &nbsp;**Slides:** <https://econettoolbox.github.io/chapters/cours/day2_cours_metrics.pdf>
+{{< fa globe >}} &nbsp;**Slides:** <https://econetoolbox.github.io/chapters/cours/day2_cours_metrics.pdf>
 :::
 
 
