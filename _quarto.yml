@@ -59,6 +59,7 @@ book:
         - chapters/day2_complex-stab.qmd
         - chapters/day2_eco-net-structure.qmd
         - chapters/day3_sbm.qmd
+        - chapters/day4_multilayer.qmd
         - chapters/day4_multilevel.qmd
         - chapters/day5_collection.qmd
         - chapters/day5_motifs.qmd
