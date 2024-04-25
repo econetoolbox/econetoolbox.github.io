@@ -61,6 +61,7 @@ book:
         - chapters/day3_sbm.qmd
         - chapters/day4_multilevel.qmd
         - chapters/day5_collection.qmd
+        - chapters/day5_motifs.qmd
     - part: "EXERCISES"
       chapters:
         - text: (d1) igraph exercise
