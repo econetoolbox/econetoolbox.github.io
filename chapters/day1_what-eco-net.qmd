@@ -1,6 +1,6 @@
 
 ::: {.callout-note icon=true appearance="simple"}
-## (day 1) What networks in ecology? {.unnumbered}
+## [d1] What net. in ecology? {.unnumbered}
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Sonia Kéfi](https://isem-evolution.fr/en/membre/kefi/)<br/>

@@ -1,6 +1,6 @@
 
 ::: {.callout-note icon=true appearance="simple"}
-## (day 1) Introduction to networks {.unnumbered}
+## [d1] Introduction to networks {.unnumbered}
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Catherine Matias](http://cmatias.perso.math.cnrs.fr/)<br/>

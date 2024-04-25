@@ -1,6 +1,6 @@
 
 ::: {.callout-note icon=true appearance="simple"}
-## (day 2) Network metrics {.unnumbered}
+## [d2] Net. metrics {.unnumbered}
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [François Massol](https://sites.google.com/a/polytechnique.org/francoismassol/home?pli=1)<br/>

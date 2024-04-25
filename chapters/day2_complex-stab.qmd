@@ -1,6 +1,6 @@
 
 ::: {.callout-note icon=true appearance="simple"}
-## (day 1) Why ecological networks? {.unnumbered}
+## [d2] Complexity-stability {.unnumbered}
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Sonia Kéfi](https://isem-evolution.fr/en/membre/kefi/)<br/>

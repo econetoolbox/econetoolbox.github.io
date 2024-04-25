@@ -1,6 +1,6 @@
 
 ::: {.callout-note icon=true appearance="simple"}
-## (day 1) What data? {.unnumbered}
+## [d1] What data? {.unnumbered}
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Elisa Thébault](https://iees-paris.fr/annuaire/thebault-elisa/)<br/>

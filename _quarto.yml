@@ -57,21 +57,22 @@ book:
         - chapters/day1_why-net.qmd
         - chapters/day2_metrics.qmd
         - chapters/day2_complex-stab.qmd
+        - chapters/day2_eco-net-structure.qmd
         - chapters/day3_sbm.qmd
         - chapters/day4_multilevel.qmd
         - chapters/day5_collection.qmd
     - part: "EXERCISES"
       chapters:
-        - text: (day 1) igraph exercise
+        - text: (d1) igraph exercise
           href: chapters/day1_0_igraph.html
-        - text: (day 1) graph exploration
+        - text: (d1) graph exploration
           href: chapters/day1_1_Graph_Exploration.html
-        - text: (day 2) network structure
+        - text: (d2) network structure
           href: chapters/day2.html
-        - text: (day 3) SBM
+        - text: (d3) SBM
           href: chapters/TutorialBM.qmd
 #        - chapters/TutorialBM.qmd
-        - text: (day 4) multilevel
+        - text: (d4) multilevel
           href: chapters/TutorialDattilo.qmd
 #        - chapters/TutorialDattilo.qmd
 
