@@ -4,12 +4,12 @@
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Stéphane Robin](https://scj-robin.github.io/)<br/>
-{{< fa globe >}} &nbsp;**Slides:** <https://econetoolbox.github.io/chapters/cours/day5_cours_motifs.pdf>
+{{< fa globe >}} &nbsp;**Slides:** <https://econetoolbox.github.io/chapters/cours/day5_cours_NetworkMotifs.pdf>
 :::
 
 
 <br />
 
 <div class="container">
-  <iframe class="responsive-iframe" src="cours/day5_cours_motifs.pdf"></iframe>
+  <iframe class="responsive-iframe" src="cours/day5_cours_NetworkMotifs.pdf"></iframe>
 </div> 
