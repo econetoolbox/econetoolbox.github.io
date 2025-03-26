@@ -31,13 +31,13 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 
 | **9:00**: *Welcome*
 | **9:30**: Introduction to networks  
-| **10:30**: *Coffee break*
-| **11:00**: What kind of networks in ecology ? 
-| **11:30**: How are ecological network data collected ? 
-| **12:00**: *Lunch break*
-| **13:30**: "Speed dating" 
-| **14:30**: `igraph`
-| **15:30**: *Coffee break*
+| **11:00**: *Coffee break*
+| **11:30**: What kind of networks in ecology ? 
+| **12:00**: How are ecological network data collected ? 
+| **12:30**: *Lunch break*
+| **14:00**: `igraph` 
+| **15:00**: "Speed dating"
+| **15:45**: *Coffee break*
 | **16:00**: What determines interactions in ecological networks?
 | **17:30**: End of the working day
 
@@ -48,11 +48,10 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 | **11:00**: Network models, null models
 | **12:00**: *Lunch break* 
 | **14:00**: Complexity stability
-| **15:00**: The structure of ecological networks: what do we know?
-| **16:00**: *Coffee break*
-| **16:30**: Group projects
+| **14:30**: The structure of ecological networks: what do we know? (1)
+| **15:30**: *Coffee break*
+| **16:00**: Group projects
 | **17:30**: End of the working day 
-
 
 ### Wednesday April 2nd 2025 - Generative Stochastic Models
 
@@ -108,8 +107,6 @@ All the data and extra functions needed during the course are available at:
 [Sonia KEFI](https://biodicee.edu.umontpellier.fr/who-we-are/sonia-kefi/) (CNRS, ISEM, Montpellier)
     
 [François MASSOL](https://sites.google.com/a/polytechnique.org/francoismassol/home) (CNRS, CIIL, Lille)
-
-[Catherine MATIAS](https://cmatias.perso.math.cnrs.fr/) (CNRS, Sorbonne U., LPSM, Paris)
     
 [Elisa THEBAULT](https://iees-paris.fr/annuaire/thebault-elisa/) (CNRS, iEES, Paris)
 
