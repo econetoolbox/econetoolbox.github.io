@@ -7,7 +7,6 @@ Here is a list of packages that you need to install so that you can follow the p
 
 library(bipartite)
 library(igraph)
-library(FWebs)
 library(vegan)
 library(cheddar)
 library(matlib)
@@ -20,7 +19,7 @@ library(poweRlaw)
 
 
 
-Mac users won't be able to install the package `FWebs`. They can use the file `crutch_functions.R` (available on the [data repository of the course](https://github.com/econetoolbox/data/) in the day2_files folder), which contains the needed functions. 
+Please source or copy-paste in your R session the functions from the `crutch_functions.R` file (available on the [data repository of the course](https://github.com/econetoolbox/data/) in the day2_files folder).
 
 
 In the course script, there is also an alternative to get the database of all the food webs that are in this package, but it requires to have `rmangal` installed:
@@ -29,7 +28,7 @@ In the course script, there is also an alternative to get the database of all th
 ```{r, eval=FALSE}
 
 library(rmangal)
-mg1 <- create.fw.list(db="mg", ref=TRUE, spatial = TRUE)
+mg1 <- create.fw.list(db="mg", ref=TRUE, spatial = TRUE) # this function can be found in the 'crutch_functions.R' script.
 
 ```
 
