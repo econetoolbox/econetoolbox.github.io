@@ -5,7 +5,8 @@ toc: true
 # Welcome {.unnumbered}
 
 ::: {.callout-note}
-The course takes will take place the week of 31 March - 4 April 2025. 
+
+The course will take place the week of 31 March - 4 April 2025. 
 
 {{< fa hand-point-right >}}&nbsp; Subscribe to the 
 [FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) 
@@ -41,6 +42,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 | **16:00**: What determines interactions in ecological networks?
 | **17:30**: End of the working day
 
+
 ### Tuesday April 1st 2025 - Network metrics and null models
 
 | **9:00**: Metrics
@@ -54,6 +56,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 | **17:30**: End of the working day 
 
 ### Wednesday April 2nd 2025 - Generative Stochastic Models
+
 
 | **9:00**: Introduction to block models
 | **10:30**: *Coffee break*
@@ -72,6 +75,8 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 | **12:00**: *Lunch break* 
 | **14:00**: Group projects
 | **17:30**: End of the working day 
+
+
 
 ### Friday April 4th 2025 - Opening and group presentations
 
