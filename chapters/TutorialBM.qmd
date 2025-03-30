@@ -1,8 +1,4 @@
 ---
-title: "Tutorial on Stochastic Block Models"
-subtitle: "April 2025"
-author: "Econet group"
-date: "April 2025"
 output:
   rmarkdown::html_vignette:
   toc: true
@@ -25,8 +21,9 @@ comment = "#>"
 
 ```
 
+# Tutorial on Stochastic Block Models {.unnumbered}
 
-# 0.Requirements
+# 0.Requirements {.unnumbered}
 
 This tutorial illustrates the use of block models for the analysis of (ecological) network.
 Is is mainly based on the vignette of the package `sbm`.
@@ -56,11 +53,11 @@ library(RColorBrewer)
 library(knitr)
 ```
 
-# 1. Simulating network data
+# 1. Simulating network data {.unnumbered}
 
 Let us first simulate networks using the `sbm` package.
 
-## 1.A. Community network
+## 1.A. Community network {.unnumbered}
 
 First define the parameters.
 
@@ -107,7 +104,7 @@ sbm::plotMyMatrix(myMat,dimLabels = list(row = "species", col = "species"),plotO
 
 **Exercice** Modify the structure by choosing other parameters and compute the statistics that you learned the previous days. Use `igraph` to plot your new networks. For instance, you may try to simulate a foodweb with 5 trophic levels.
 
-## 1.B. Bipartite networks
+## 1.B. Bipartite networks {.unnumbered}
 
 **Exercice** Use the function `sampleBipartiteSBM` to simulate a weighted (counts) bipartite network with the following parameters.
 
@@ -132,7 +129,7 @@ myBipartiteNet
 Plot your network as a matrix.  
 
 
-# 2. Inference on simulated data
+# 2. Inference on simulated data {.unnumbered}
 
 **Exercice** Use the inference functions to estimate the parameters of your simulated networks. 
 
@@ -151,9 +148,9 @@ Faire de même pour votre réseau bipartite.
 
 
 
-# 3. Analyzing an ecological data set
+# 3. Analyzing an ecological data set {.unnumbered}
 
-## 3.A. The data set: antagonistic tree/fungus interaction network
+## 3.A. The data set: antagonistic tree/fungus interaction network {.unnumbered}
 
 We consider the fungus-tree interaction network studied by @tree_fungus_network, available with the package `sbm` :
 
@@ -175,9 +172,9 @@ It is a list with the following entries:
 We first consider the tree-tree interactions resulting into a Simple Network.
 Then we consider the bipartite network between trees and fungi.
 
-## 3.B. Analysis of the tree/tree data
+## 3.B. Analysis of the tree/tree data {.unnumbered}
 
-### 2.B.1 Tree-tree binary interaction networks
+### 2.B.1 Tree-tree binary interaction networks {.unnumbered}
 
 We first consider the binary network where an edge is drawn between two trees when they do share a least one common fungi:
 
@@ -275,7 +272,7 @@ mySimpleSBM$setModel(5)
 
 
 
-### 3.B.3  Analysis of the weighted interaction network
+### 3.B.3  Analysis of the weighted interaction network {.unnumbered}
 
 Instead of considering the binary network tree-tree we may consider the weighted network where the link between two trees is the number of fungi they share.
 
@@ -350,7 +347,7 @@ P <- plotAlluvial(listMemberships)
 
 
 
-### 3.B.4 Introduction of covariates
+### 3.B.4 Introduction of covariates {.unnumbered}
 
 We have on each pair of trees 3 covariates, namely the genetic distance, the taxonomic distance and the geographic distance.
 Each covariate has to be introduced as a matrix: $X^k_{ij}$ corresponds to the value of the $k$-th covariate describing the couple $(i,j)$.
@@ -406,7 +403,7 @@ listMemberships$weightedCov <- mySimpleSBMCov$memberships
 plotAlluvial(listMemberships)
 ```
 
-## 3.C Analysis of the tree/fungi data
+## 3.C Analysis of the tree/fungi data {.unnumbered}
 
 We now analyze the bipartite tree/fungi interactions.
 The incidence matrix can be plotted with the function \code{plotMyMatrix}
@@ -484,4 +481,4 @@ plot(myBipartiteSBM, type = "expected")
 
 
 
-## References
+## References 
