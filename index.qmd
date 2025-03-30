@@ -109,7 +109,7 @@ All the data and extra functions needed during the course are available at:
     
 [Sonia KEFI](https://biodicee.edu.umontpellier.fr/who-we-are/sonia-kefi/) (CNRS, ISEM, Montpellier)
     
-[François MASSOL](https://sites.google.com/a/polytechnique.org/francoismassol/home) (CNRS, CIIL, Lille)
+[François MASSOL](https://sites.google.com/a/polytechnique.org/francoismassol/home) (CNRS, iEES, Paris)
     
 [Elisa THEBAULT](https://iees-paris.fr/annuaire/thebault-elisa/) (CNRS, iEES, Paris)
 
