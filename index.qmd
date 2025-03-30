@@ -80,7 +80,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 | **11:00**: finalizing presentations
 | **12:00**: *Lunch break at the CESAB* 
 | **14:00**: Group project presentations
-| **16:30**: End of the workshop
+| **16:30**: End of the course
 
 
 ## Prerequisites {.unnumbered}
