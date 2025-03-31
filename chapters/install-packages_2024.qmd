@@ -38,6 +38,9 @@ mg1 <- create.fw.list(db="mg", ref=TRUE, spatial = TRUE) # this function can be 
 
 ```{r, eval=FALSE}
 
+remotes::install_github("Jo-Theo/shinySbm")
+remotes::install_github("Chabert-Liddell/colSBM")
+library(colSBM)
 library(network)
 library(GGally)
 library(RColorBrewer)
