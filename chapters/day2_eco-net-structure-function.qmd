@@ -1,10 +1,10 @@
-
+ 
 ::: {.callout-note icon=true appearance="simple"}
 ## [d2] Ecological net. structure {.unnumbered}
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Elisa Thébault](https://iees-paris.fr/annuaire/thebault-elisa/)<br/>
-{{< fa globe >}} &nbsp;**Slides:** <https://econettoolbox.github.io/chapters/cours/day2_cours3_WhatStructure.pdf>
+{{< fa globe >}} &nbsp;**Slides:** <https://econettoolbox.github.io/chapters/cours/day2_cours3_StructureFunction.pdf>
 :::
 
 
