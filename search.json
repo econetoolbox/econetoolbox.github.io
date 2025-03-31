@@ -135,14 +135,14 @@
     ]
   },
   {
-    "objectID": "chapters/day1_why-net.html",
-    "href": "chapters/day1_why-net.html",
-    "title": "[d1] What questions?",
+    "objectID": "chapters/day1_structure.html",
+    "href": "chapters/day1_structure.html",
+    "title": "[d1] What structure?",
     "section": "",
     "text": "Author: Elisa Thébault   Slides: https://econetoolbox.github.io/chapters/cours/day1_cours4_WhyNetworks.pdf",
     "crumbs": [
       "COURSES",
-      "[d1] What questions?"
+      "[d1] What structure?"
     ]
   },
   {
@@ -168,8 +168,8 @@
     ]
   },
   {
-    "objectID": "chapters/day2_eco-net-structure.html",
-    "href": "chapters/day2_eco-net-structure.html",
+    "objectID": "chapters/day2_eco-net-structure-function.html",
+    "href": "chapters/day2_eco-net-structure-function.html",
     "title": "[d2] Ecological net. structure",
     "section": "",
     "text": "Author: Elisa Thébault   Slides: https://econettoolbox.github.io/chapters/cours/day2_cours3_WhatStructure.pdf",
