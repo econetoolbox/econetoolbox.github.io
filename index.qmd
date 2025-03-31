@@ -37,9 +37,9 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 | **12:00**: How are ecological network data collected ? 
 | **12:30**: *Lunch break*
 | **14:00**: `igraph` 
-| **15:00**: "Speed dating"
-| **15:45**: *Coffee break*
-| **16:00**: What determines interactions in ecological networks?
+| **15:30**: "Speed dating"
+| **16:15**: *Coffee break*
+| **16:30**: The structure of ecological networks
 | **17:30**: End of the working day
 
 
@@ -50,22 +50,23 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 | **11:00**: Network models, null models
 | **12:00**: *Lunch break* 
 | **14:00**: Complexity stability
-| **14:30**: The structure of ecological networks: what do we know? (1)
+| **14:30**: The consequences of network structure 
 | **15:30**: *Coffee break*
 | **16:00**: Group projects
 | **17:30**: End of the working day 
 
-### Wednesday April 2nd 2025 - Generative Stochastic Models
 
+### Wednesday April 2nd 2025 - Generative Stochastic Models
 
 | **9:00**: Introduction to block models
 | **10:30**: *Coffee break*
 | **11:00**: Selecting the number of blocks
 | **12:00**: *Lunch break* 
-| **14:00**: The structure of ecological networks: what do we know? (2)
+| **14:00**: The structure of ecological networks (2)
 | **15:00**: *Coffee break*
 | **15:30**: Group projects
 | **17:30**: End of the working day 
+
 
 ### Thursday April 3rd 2025 - Multilayer networks
 
@@ -75,7 +76,6 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 | **12:00**: *Lunch break* 
 | **14:00**: Group projects
 | **17:30**: End of the working day 
-
 
 
 ### Friday April 4th 2025 - Opening and group presentations
