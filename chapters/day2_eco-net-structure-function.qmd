@@ -11,6 +11,6 @@
 <br />
 
 <div class="container">
-  <iframe class="responsive-iframe" src="cours/day2_cours3_WhatStructure.pdf"></iframe>
+  <iframe class="responsive-iframe" src="cours/day2_cours3_StructureFunction.pdf"></iframe>
 </div> 
 
