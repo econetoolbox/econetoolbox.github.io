@@ -10,10 +10,8 @@ The course will take place the week of 30 March - 3 April 2026.
 
 {{< fa hand-point-right >}}&nbsp; See the [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/evenement/frb-cesab-analyse-de-reseaux-dinteractions-en-ecologie-2026/) for the pre-registration link.
 
-More information is available on the [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/analyse-de-reseaux-dinteractions-en-ecologie/). 
 Subscribe to the 
 [FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) to stay informed. 
-
 :::
 
 The objective of this five-day course is to train young researchers in analyzing ecological network data. The course covers a general introduction to networks, classical metrics (including modularity, nesteness, clustering), null models, generative models (including SBM), multilayer networks, as well as an overview of newer techniques (such as embedding). Each topic is explored through lectures followed by practicals.
