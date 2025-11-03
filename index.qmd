@@ -6,29 +6,29 @@ toc: true
 
 ::: {.callout-note}
 
-The course will take place the week of 31 March - 4 April 2025. 
+The course will take place the week of 30 March - 3 April 2026. 
 
-{{< fa hand-point-right >}}&nbsp; Subscribe to the 
-[FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) 
-to stay informed. More information is available on the  
-[FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/analyse-de-reseaux-dinteractions-en-ecologie/).
+{{< fa hand-point-right >}}&nbsp; See the [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/evenement/frb-cesab-analyse-de-reseaux-dinteractions-en-ecologie-2026/) for the pre-registration link. 
+More information is available on the [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/analyse-de-reseaux-dinteractions-en-ecologie/). 
+Subscribe to the 
+[FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) to stay informed. 
+
 :::
 
+The objective of this five-day course is to train young researchers in analyzing ecological network data. The course covers a general introduction to networks, classical metrics (including modularity, nesteness, clustering), null models, generative models (including SBM), multilayer networks, as well as an overview of newer techniques (such as embedding). Each topic is explored through lectures followed by practicals.
 
-
-The objective of this five-day course, co-organized by the 
+The course is co-organized by the 
 [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
 and the
-[ANR ECONET](https://cmatias.perso.math.cnrs.fr/ANR_EcoNet.html), 
-is to train young researchers in analyzing ecological network data. The course covers a general introduction to networks, classical metrics (including modularity, nesteness, clustering), null models, generative models (including SBM), multilayer networks, as well as an overview of newer techniques (such as embedding). Each topic is explored through lectures followed by practicals.
+[ANR ECONET](https://cmatias.perso.math.cnrs.fr/ANR_EcoNet.html), and benefits from funding from the [PEPR Maths-Vives](https://www.maths-vives.fr/en/).   
 
 
-## Tentative program (dates/hours may yet change) {.unnumbered}
+## Tentative program {.unnumbered}
 
 Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4pm. 
 
 
-### Monday March 31st 2025: Introduction
+### Monday - Introduction
 
 | **9:00**: *Welcome*
 | **9:30**: Introduction to networks  
@@ -43,7 +43,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 | **17:30**: End of the working day
 
 
-### Tuesday April 1st 2025 - Network metrics and null models
+### Tuesday - Network metrics and null models
 
 | **9:00**: Metrics
 | **10:30**: *Coffee break*
@@ -56,7 +56,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 | **17:30**: End of the working day 
 
 
-### Wednesday April 2nd 2025 - Generative Stochastic Models
+### Wednesday - Generative Stochastic Models
 
 | **9:00**: Introduction to block models
 | **10:30**: *Coffee break*
@@ -68,7 +68,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 | **17:30**: End of the working day 
 
 
-### Thursday April 3rd 2025 - Multilayer networks
+### Thursday - Multilayer networks
 
 | **9:00**: Multilayer networks in ecology
 | **10:30**: *Coffee break*
@@ -78,7 +78,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 | **17:30**: End of the working day 
 
 
-### Friday April 4th 2025 - Opening and group presentations
+### Friday - Opening and group presentations
 
 | **9:00**: Motifs, embedding, collection of networks
 | **10:30**: *Coffee break*
