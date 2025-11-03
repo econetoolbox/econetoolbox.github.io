@@ -8,7 +8,8 @@ toc: true
 
 The course will take place the week of 30 March - 3 April 2026. 
 
-{{< fa hand-point-right >}}&nbsp; See the [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/evenement/frb-cesab-analyse-de-reseaux-dinteractions-en-ecologie-2026/) for the pre-registration link. 
+{{< fa hand-point-right >}}&nbsp; See the [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/evenement/frb-cesab-analyse-de-reseaux-dinteractions-en-ecologie-2026/) for the pre-registration link.
+
 More information is available on the [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/analyse-de-reseaux-dinteractions-en-ecologie/). 
 Subscribe to the 
 [FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) to stay informed. 
@@ -23,7 +24,7 @@ and the
 [ANR ECONET](https://cmatias.perso.math.cnrs.fr/ANR_EcoNet.html), and benefits from funding from the [PEPR Maths-Vives](https://www.maths-vives.fr/en/).   
 
 
-## Tentative program {.unnumbered}
+## Program {.unnumbered}
 
 Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4pm. 
 
