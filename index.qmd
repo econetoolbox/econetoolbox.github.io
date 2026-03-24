@@ -29,14 +29,14 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 
 ### Monday - Introduction
 
-| **9:00**: *Welcome*
-| **9:30**: Introduction to networks  
+| **9:00**:  *Welcome*
+| **9:30**:  Introduction to networks in ecology 
 | **11:00**: *Coffee break*
-| **11:30**: What kind of networks in ecology ? 
+| **11:30**: Introduction to graphs 
 | **12:00**: How are ecological network data collected ? 
 | **12:30**: *Lunch break*
-| **14:00**: `igraph` 
-| **15:30**: "Speed dating"
+| **13:30**: "Speed dating" 
+| **14:30**: `igraph`
 | **16:15**: *Coffee break*
 | **16:30**: The structure of ecological networks
 | **17:30**: End of the working day
@@ -44,7 +44,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 
 ### Tuesday - Network metrics and null models
 
-| **9:00**: Metrics
+| **9:00**:  Metrics
 | **10:30**: *Coffee break*
 | **11:00**: Network models, null models
 | **12:00**: *Lunch break* 
@@ -57,7 +57,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 
 ### Wednesday - Generative Stochastic Models
 
-| **9:00**: Introduction to block models
+| **9:00**:  Introduction to block models
 | **10:30**: *Coffee break*
 | **11:00**: Selecting the number of blocks
 | **12:00**: *Lunch break* 
@@ -69,7 +69,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 
 ### Thursday - Multilayer networks
 
-| **9:00**: Multilayer networks in ecology
+| **9:00**:  Multilayer networks in ecology
 | **10:30**: *Coffee break*
 | **11:00**: Multilayer in practice
 | **12:00**: *Lunch break* 
@@ -79,7 +79,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 
 ### Friday - Opening and group presentations
 
-| **9:00**: Motifs, embedding, collection of networks
+| **9:00**:  Inference
 | **10:30**: *Coffee break*
 | **11:00**: finalizing presentations
 | **12:00**: *Lunch break at the CESAB* 
