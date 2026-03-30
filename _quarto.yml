@@ -54,10 +54,10 @@ book:
         - chapters/day1_intro.qmd
         - chapters/day1_what-eco-net.qmd
         - chapters/day1_what-eco-net2.qmd
-        - chapters/day1_why-net.qmd
+        - chapters/day1_structure.qmd
         - chapters/day2_metrics.qmd
         - chapters/day2_complex-stab.qmd
-        - chapters/day2_eco-net-structure.qmd
+        - chapters/day2_eco-net-structure-function.qmd
         - chapters/day3_sbm.qmd
         - chapters/day4_multilayer.qmd
         - chapters/day4_multilevel.qmd

@@ -12,12 +12,9 @@ Source of the [workshop](https://econetoolbox.github.io/) **_Analyzing Ecologica
 co-organized by the
 [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
 and the
-[ANR ECONET](https://cmatias.perso.math.cnrs.fr/ANR_EcoNet.html).
+[ANR ECONET](https://cmatias.perso.math.cnrs.fr/ANR_EcoNet.html). The 2026 edition benefited from funding from the [PEPR Maths-Vives](https://www.maths-vives.fr/en/).
 
 
-### Citation
-
-> to do
 
 
 <hr />
