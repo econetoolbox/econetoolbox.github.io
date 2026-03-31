@@ -71,8 +71,10 @@ book:
           href: chapters/day1_1_Graph_Exploration.html
         - text: (d2) network structure
           href: chapters/day2.html
-        - text: (d3) SBM
-          href: chapters/TutorialBM.qmd
+        - text: (d3) SBM principle
+          href: chapters/day3_Tutorial_SBM_principle.html
+        - text: (d3) SBM application
+          href: chapters/day3_Tutorial_SBM_Application.html
 #        - chapters/TutorialBM.qmd
         - text: (d4) multilevel
           href: chapters/TutorialDattilo.qmd
