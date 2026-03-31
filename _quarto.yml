@@ -62,7 +62,7 @@ book:
         - chapters/day4_multilayer.qmd
         - chapters/day4_multilayerSBM.qmd
       #  - chapters/day5_collection.qmd
-        - chapters/day5_motifs.qmd
+      #  - chapters/day5_motifs.qmd
     - part: "EXERCISES"
       chapters:
         - text: (d1) igraph exercise
