@@ -57,9 +57,9 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 
 ### Wednesday - Generative Stochastic Models
 
-| **9:00**:  Introduction to block models
+| **9:00**:  Introduction to block models (1)
 | **10:30**: *Coffee break*
-| **11:00**: Selecting the number of blocks
+| **11:00**: Introduction to block models (2)
 | **12:00**: *Lunch break* 
 | **14:00**: The structure of ecological networks (2)
 | **15:00**: *Coffee break*
@@ -71,7 +71,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 
 | **9:00**:  Multilayer networks in ecology
 | **10:30**: *Coffee break*
-| **11:00**: Multilayer in practice
+| **11:00**: Multilayer with block models
 | **12:00**: *Lunch break* 
 | **14:00**: Group projects
 | **17:30**: End of the working day 
@@ -79,7 +79,7 @@ Classes will run from 9am to 5:30pm every day except Friday, when we finish at 4
 
 ### Friday - Opening and group presentations
 
-| **9:00**:  Inference
+| **9:00**:  Inference of networks
 | **10:30**: *Coffee break*
 | **11:00**: finalizing presentations
 | **12:00**: *Lunch break at the CESAB* 

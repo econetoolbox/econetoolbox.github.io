@@ -1,6 +1,6 @@
 
 ::: {.callout-note icon=true appearance="simple"}
-## [d4] Multilevel net. {.unnumbered}
+## [d4] Multilayer with SBM {.unnumbered}
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Sophie Donnet](https://sophiedonnet.github.io/)<br/>

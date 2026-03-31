@@ -60,8 +60,8 @@ book:
         - chapters/day2_eco-net-structure-function.qmd
         - chapters/day3_sbm.qmd
         - chapters/day4_multilayer.qmd
-        - chapters/day4_multilevel.qmd
-        - chapters/day5_collection.qmd
+        - chapters/day4_multilayerSBM.qmd
+      #  - chapters/day5_collection.qmd
         - chapters/day5_motifs.qmd
     - part: "EXERCISES"
       chapters:
@@ -75,9 +75,8 @@ book:
           href: chapters/day3_Tutorial_SBM_principle.html
         - text: (d3) SBM application
           href: chapters/day3_Tutorial_SBM_Application.html
-#        - chapters/TutorialBM.qmd
-        - text: (d4) multilevel
-          href: chapters/TutorialDattilo.qmd
+        - text: (d4) SBM for multilayer networks
+          href: chapters/day4_TutorialMultilayer.html
 #        - chapters/TutorialDattilo.qmd
 
 
