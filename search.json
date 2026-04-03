@@ -210,5 +210,16 @@
       "COURSES",
       "[d4] Multilayer with SBM"
     ]
+  },
+  {
+    "objectID": "chapters/day5_inference.html",
+    "href": "chapters/day5_inference.html",
+    "title": "[d5] Inference",
+    "section": "",
+    "text": "Author: Stéphane Robin   Slides: https://econetoolbox.github.io/chapters/cours/day5_cours_inference.pdf",
+    "crumbs": [
+      "COURSES",
+      "[d5] Inference"
+    ]
   }
 ]
