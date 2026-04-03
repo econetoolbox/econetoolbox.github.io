@@ -62,7 +62,7 @@ book:
         - chapters/day4_multilayer.qmd
         - chapters/day4_multilayerSBM.qmd
       #  - chapters/day5_collection.qmd
-      #  - chapters/day5_motifs.qmd
+        - chapters/day5_inference.qmd
     - part: "EXERCISES"
       chapters:
         - text: (d1) igraph exercise
@@ -77,6 +77,8 @@ book:
           href: chapters/day3_Tutorial_SBM_Application.html
         - text: (d4) SBM for multilayer networks
           href: chapters/day4_TutorialMultilayer.html
+        - text: (d5) Inference
+          href: chapters/day5_BarentsPLNnetwork.html
 #        - chapters/TutorialDattilo.qmd
 
 
