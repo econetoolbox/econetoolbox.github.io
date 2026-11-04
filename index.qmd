@@ -6,9 +6,9 @@ toc: true
 
 ::: {.callout-note}
 
-The course will take place the week of 30 March - 3 April 2026. 
+The course will take place the week of 19 - 23 April 2027. *Pre-registrations will be open from the 9th of November to the 6th of December, 2026.*
 
-{{< fa hand-point-right >}}&nbsp; See the [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/evenement/frb-cesab-analyse-de-reseaux-dinteractions-en-ecologie-2026/) for the pre-registration link.
+{{< fa hand-point-right >}}&nbsp; See the [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/evenement/frb-cesab-analyse-de-reseaux-dinteractions-en-ecologie-2027/) for the pre-registration link.
 
 Subscribe to the 
 [FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) to stay informed. 
